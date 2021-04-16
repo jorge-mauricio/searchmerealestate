@@ -30,16 +30,16 @@ date_default_timezone_set('America/Sao_Paulo');
 //General configuration.
 //**************************************************************************************
 //Basic information.
-$configSystemClientName = "Planejamento Visual";
+$configSystemClientName = "Search Me Real Estate";
 
-$configSiteTitle = "SyncSystem - Multiplatform"; //site name
+$configSiteTitle = "Search Me Real Estate – Opportunities in NY, Europe and Brazil"; //site name
 $configSystemName = "Sistema de Gerenciamento de Conteúdo"; //Sistema de Controle | Sistema Administrativo | CRM
-$configDevName = "Planejamento Visual - Arte e Tecnologia"; //Jorge Mauricio - Programador Visual | Planejamento Visual - Arte e Tecnologia | Jorge Mauricio - Criação e Treinamento Web | Web Inventor - Imagine, realize.
-$configDevSite = "http://www.planejamentovisual.com.br"; //http://www.programadorvisual.com.br | http://www.planejamentovisual.com.br | http://www.jorgemauricio.com | http://www.webinventor.com.br
-$configCopyrightYear = "2015";
+$configDevName = "Jorge Mauricio - Full Stack Web Developer"; //Jorge Mauricio - Programador Visual | Planejamento Visual - Arte e Tecnologia | Jorge Mauricio - Criação e Treinamento Web | Web Inventor - Imagine, realize.
+$configDevSite = "http://www.jorgemauricio.com"; //http://www.programadorvisual.com.br | http://www.planejamentovisual.com.br | http://www.jorgemauricio.com | http://www.webinventor.com.br
+$configCopyrightYear = "2021";
 
-$configSystemURL = "http://multiplatformv1.syncsystem.com.br";
-$configSystemURLSSL = "http://multiplatformv1.syncsystem.com.br";
+$configSystemURL = "http://www.searchmerealestate.com";
+$configSystemURLSSL = "http://www.searchmerealestate.com";
 
 $configSystemURLImages = ".."; //".." = relative path | http://www.nomedodominio.com.br = absolute path
 
@@ -49,9 +49,10 @@ $configFrontendMobileDefaultView = "frontend_php_mobile";
 
 //DB especial configuration.
 //----------------------
-$configSystemDBTablePrefix = "prefix_ssmv1_";
+$configSystemDBTablePrefix = "prefix_smrev1_";
 $configSystemDBType = 2; //2 - MySQL | 3 - SQL Server
 $enableSystemDBSizeOtimize = 0; //0-disable (all fields created) | 1-enable (only enabled fields created on database setup)
+//TODO: spelling correction
 
 
 //Table names.
@@ -60,7 +61,7 @@ $configSystemDBTableCounter = "counter";
 $configSystemDBTableCategories = "categories";
 $configSystemDBTableFiles = "files";
 $configSystemDBTableContent = "content";
-$configSystemDBTableProducts = "products";
+$configSystemDBTableProducts = "real_estate";
 $configSystemDBTablePublications = "publications";
 $configSystemDBTableForms = "forms";
 $configSystemDBTableFormsFields = "forms_fields";

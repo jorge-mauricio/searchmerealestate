@@ -8,14 +8,14 @@ Notes:
 exports.appLabels = {
     //Config.
     //**************************************************************************************
-    configSiteTile: "SyncSystem - Multiplatform (debug: çáéã)",
-    configSiteDescription: "Description example.",
-    configSiteKeywords: "keywords or key terms, separated by, commas",
+    configSiteTile: "Search Me Real Estate",
+    configSiteDescription: "Our goal is to attend you, customized and personalized, so that we can build the most valuable attribute for a healthy relationship - TRUST!",
+    configSiteKeywords: "real estate in united states, real estate in new york",
 
     configFrontendLanguage: "en_US", // en_US | pt_BR
 
-    layoutSystemName: "Sistema de Gerenciamento de Conteúdo",
-    layoutDevName: "Planejamento Visual - Arte e Tecnologia",
+    layoutSystemName: "Content Management System",
+    layoutDevName: "Jorge Mauricio - Full Stack Web Developer",
     //**************************************************************************************
 
 
@@ -481,16 +481,16 @@ exports.appLabels = {
 
     //Products.
     //**************************************************************************************
-    backendProductsTitleMain: "Products",
-    backendProductsTitleEdit: "Edit Products",
-    backendProductsTitleDetails: "Product Details",
-    backendProductsTitleTable: "Include Products",
-    backendProductsTitleTableInsert: "Include Products",
-    backendProductsTitleTableEdit: "Edit Product",
-    backendProductsTitleTableDetails: "Product Details",
+    backendProductsTitleMain: "Real Estates",
+    backendProductsTitleEdit: "Edit Real Estates",
+    backendProductsTitleDetails: "Real Estate Details",
+    backendProductsTitleTable: "Include Real Estates",
+    backendProductsTitleTableInsert: "Include Real Estates",
+    backendProductsTitleTableEdit: "Edit Real Estate",
+    backendProductsTitleTableDetails: "Real Estate Details",
 
-    backendProductsCode: "Product Code",
-    backendProductsTitle: "Product Title",
+    backendProductsCode: "Real Estate Code",
+    backendProductsTitle: "Real Estate Title",
     backendProductsDescription: "Description",
 
     backendProductsValue: "Value",
@@ -500,7 +500,7 @@ exports.appLabels = {
     backendProductsCoefficient: "Coefficient",
     backendProductsCoefficientInstructions: "Coefficient Instructions.",
     
-    backendProductsType: "Product Type",
+    backendProductsType: "Real Estate Type",
     backendProductsStatus: "Status",
 
     backendProductsRU: "Registered User",
@@ -510,10 +510,10 @@ exports.appLabels = {
     backendProductsRU4: "Registered User 4",
     backendProductsRU5: "Registered User 5",
 
-    backendProductsFilterGeneric1: "Generic Filter 1",
-    backendProductsFilterGeneric2: "Generic Filter 2",
-    backendProductsFilterGeneric3: "Generic Filter 3",
-    backendProductsFilterGeneric4: "Generic Filter 4",
+    backendProductsFilterGeneric1: "Availability Type",//sale, rent, investment
+    backendProductsFilterGeneric2: "Unit Features",//dishwasher, a/c
+    backendProductsFilterGeneric3: "Comunity Features",//fitness center
+    backendProductsFilterGeneric4: "Policies",//cats, dogs
     backendProductsFilterGeneric5: "Generic Filter 5",
     backendProductsFilterGeneric6: "Generic Filter 6",
     backendProductsFilterGeneric7: "Generic Filter 7",
@@ -562,14 +562,14 @@ exports.appLabels = {
     backendProductsInfo19: "Information 19",
     backendProductsInfo20: "Information 20",
 
-    backendProductsInfoS1: "Information Small 1",
-    backendProductsInfoS2: "Information Small 2",
-    backendProductsInfoS3: "Information Small 3",
-    backendProductsInfoS4: "Information Small 4",
-    backendProductsInfoS5: "Information Small 5",
-    backendProductsInfoS6: "Information Small 6",
-    backendProductsInfoS7: "Information Small 7",
-    backendProductsInfoS8: "Information Small 8",
+    backendProductsInfoS1: "Address",
+    backendProductsInfoS2: "Neighborhood",
+    backendProductsInfoS3: "City",
+    backendProductsInfoS4: "State",
+    backendProductsInfoS5: "Country",
+    backendProductsInfoS6: "View",
+    backendProductsInfoS7: "Conditions",
+    backendProductsInfoS8: "Online Map",
     backendProductsInfoS9: "Information Small 9",
     backendProductsInfoS10: "Information Small 10",
     backendProductsInfoS11: "Information Small 11",
@@ -599,13 +599,13 @@ exports.appLabels = {
     backendProductsNumber4: "Number 4",
     backendProductsNumber5: "Number 5",
 
-    backendProductsNumberS1: "Number Small 1",
-    backendProductsNumberS2: "Number Small 2",
-    backendProductsNumberS3: "Number Small 3",
-    backendProductsNumberS4: "Number Small 4",
-    backendProductsNumberS5: "Number Small 5",
+    backendProductsNumberS1: "Rent Value",
+    backendProductsNumberS2: "Sale Value",
+    backendProductsNumberS3: "Maintenance Value",
+    backendProductsNumberS4: "Tax Value",
+    backendProductsNumberS5: "Investment Value",
 
-    backendProductsURL1: "URL1",
+    backendProductsURL1: "External Link",
     backendProductsURL2: "URL2",
     backendProductsURL3: "URL3",
     backendProductsURL4: "URL4",
@@ -623,7 +623,7 @@ exports.appLabels = {
     backendProductsFile4: "File 4",
     backendProductsFile5: "File 5",
 
-    backendProductsActivation1: "Activation 1",
+    backendProductsActivation1: "Actv. Home",
     backendProductsActivation2: "Activation 2",
     backendProductsActivation3: "Activation 3",
     backendProductsActivation4: "Activation 4",
@@ -710,7 +710,7 @@ exports.appLabels = {
     backendPublicationsFile4: "File 4",
     backendPublicationsFile5: "File 5",
 
-    backendPublicationsActivation1: "Activation 1",
+    backendPublicationsActivation1: "Act. Home",
     backendPublicationsActivation2: "Activation 2",
     backendPublicationsActivation3: "Activation 3",
     backendPublicationsActivation4: "Activation 4",
