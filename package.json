@@ -1,18 +1,26 @@
 {
   "_comment": "scripts -> test: echo \"Error: no test specified\" && exit 1 | private: true - prevents package.json of being published on npm | start: webpack --conig webpack.config.js",
-  "name": "multiplatformv1.syncsystem.com.br",
-  "version": "0.1.0",
+  "name": "searchmerealestate.com",
+  "version": "1.0.0",
   "engines": {
     "node": "12.4.0",
     "npm": "6.9.0"
   },
-  "description": "SyncSystem - Multiplatform",
+  "description": "Search Me Real Estate",
   "private": true,
-  "main": "node -r dotenv/config build/bundle.react.js",
+  "main": "node app",
   "scripts": {
-     "start": "node -r dotenv/config build/bundle.react.js",
-     "build": "webpack --config webpack.react.js --progress && webpack --config webpack.react.client.js --progress",
-     "build:start": "webpack --config webpack.react.js --progress && webpack --config webpack.react.client.js --progress && node -r dotenv/config build/bundle.js"
+    "backend:node": "node app",
+    "frontend:react": "node -r dotenv/config build/bundle.react.js",
+    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js",
+    "test": "jest --verbose",
+    "react:webpackclient": "webpack --config webpack.react.client.js --watch",
+    "react:webpack": "webpack --config webpack.react.js --watch",
+    "react:start": "nodemon --watch build --exec node build/bundle.react.js",
+    "react-build": "webpack --config webpack.react.js --progress && webpack --config webpack.react.client.js --progress",
+    "react-app": "npm-run-all --parallel react:* backend:node",
+    "app-start": "npm-run-all --parallel backend:node frontend:react"
   },
   "repository": {
     "type": "git",

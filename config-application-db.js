@@ -25,7 +25,8 @@ const dbSystemCon = mysql.createConnection({
     host     : process.env.DB_SYSTEM_HOST,
     user     : process.env.DB_SYSTEM_USER,
     password : process.env.DB_SYSTEM_PASSWORD,
-    database : process.env.DB_SYSTEM_DATABASE
+    database : process.env.DB_SYSTEM_DATABASE,
+    port: 3306
 });
 
 //----------------------
@@ -46,7 +47,8 @@ const dbSystemConPool = mysql.createPool({
     host     : process.env.DB_SYSTEM_HOST,
     user     : process.env.DB_SYSTEM_USER,
     password : process.env.DB_SYSTEM_PASSWORD,
-    database : process.env.DB_SYSTEM_DATABASE
+    database : process.env.DB_SYSTEM_DATABASE,
+    port: 3306
 });
 //----------------------
 

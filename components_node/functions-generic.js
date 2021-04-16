@@ -965,7 +965,8 @@ module.exports = class FunctionsGeneric
 
 
         //Logic.
-        if(strValue !== null || typeof(strValue) !== "undefined")
+        //if(strValue !== null || typeof(strValue) !== "undefined")
+        if(strValue !== null && typeof(strValue) !== "undefined")
         {
             //Set default configuration.
             //Note: Check if this configuration can be applied only to an instance.

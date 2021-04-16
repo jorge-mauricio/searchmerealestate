@@ -977,6 +977,7 @@ module.exports = class ObjectCategoriesDetails
             }
 
             this.tblCategoriesIdStatus = this.resultsCategoryDetails[0].id_status;
+            //console.log("this.tblCategoriesIdStatus=", this.tblCategoriesIdStatus); //returning undefinied
             if(this.tblCategoriesIdStatus == 0)
             {
                 this.tblCategoriesIdStatus_print = FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageBackend.appLabels, this.labelPrefix + "ItemDropDownSelectNone");

@@ -32,7 +32,7 @@ gSystemConfig.configDebug = true; //true (debug mode) | false (production mode)
 gSystemConfig.configSystemClientName = "Search Me Real Estate"; //(Note: moved to language file)
 
 gSystemConfig.configSiteTitle = "Search Me Real Estate – Opportunities in NY, Europe and Brazil"; //site name (Note: moved to language file)
-gSystemConfig.configSystemName = "Sistema de Gerenciamento de Conteúdo"; //Sistema de Controle | Sistema Administrativo | CRM
+gSystemConfig.configSystemName = "Content Management System"; //Sistema de Controle | Sistema Administrativo | CRM | Content Management System
 gSystemConfig.configDevName = "Jorge Mauricio - Full Stack Web Developer"; //Jorge Mauricio - Programador Visual | Planejamento Visual - Arte e Tecnologia | Jorge Mauricio - Criação e Treinamento Web | Web Inventor - Imagine, realize. (Note: moved to language file)
 gSystemConfig.configDevSite = "http://www.jorgemauricio.com"; //http://www.programadorvisual.com.br | http://www.planejamentovisual.com.br | http://www.jorgemauricio.com | http://www.webinventor.com.br
 gSystemConfig.configCopyrightYear = "2021";
@@ -361,7 +361,7 @@ gSystemConfig.configCategoryType = [
 
 //Categories - configuration and resources.
 //**************************************************************************************
-gSystemConfig.configCategoriesSort = "title"; //options: id | sort_order | date_creation esc | date_creation desc | title
+gSystemConfig.configCategoriesSort = "sort_order"; //options: id | sort_order | date_creation esc | date_creation desc | title
 gSystemConfig.enableCategoriesSortCustom = 0; //0 - disable | 1 - enable
 gSystemConfig.configCategoriesInputOrder = [/*"inputRowCategories_id_parent", 
                                             "inputRowCategories_sort_order", 
@@ -388,9 +388,9 @@ gSystemConfig.configCategoriesInputOrder = [/*"inputRowCategories_id_parent",
 */];
 
 //Basic resources.
-gSystemConfig.enableCategoriesImageMain = 0; //0 - disable | 1 - enable
+gSystemConfig.enableCategoriesImageMain = 1; //0 - disable | 1 - enable
 gSystemConfig.enableCategoriesDescription = 1; //0 - disable | 1 - enable
-gSystemConfig.enableCategoriesSortOrder = 0; //0 - disable | 1 - enable
+gSystemConfig.enableCategoriesSortOrder = 1; //0 - disable | 1 - enable
 gSystemConfig.enableCategoriesRestrictedAccess = 0; //0 - disable | 1 - enable
 gSystemConfig.enableCategoriesIdParentEdit = 0; //0 - disable | 1 - enable
 gSystemConfig.enableCategoriesStatus = 0; //0 - disable | 1 - enable
@@ -627,7 +627,7 @@ gSystemConfig.configFilesInputOrder = [/*"inputRowFiles_id_parent",
 gSystemConfig.enableFilesIdParentEdit = 0; //0 - disable | 1 - enable
 gSystemConfig.enableFilesSortOrder = 1; //0 - disable | 1 - enable
 
-gSystemConfig.enableFilesTitle = 1; //0 - disable | 1 - enable
+gSystemConfig.enableFilesTitle = 0; //0 - disable | 1 - enable
 gSystemConfig.enableFilesDescription = 0; //0 - disable | 1 - enable
 gSystemConfig.enableFilesHTMLCode = 0; //0 - disable | 1 - enable
 gSystemConfig.enableFilesThumbnails = 0; //0 - disable | 1 - enable //Thumbnails for video files.
@@ -807,7 +807,7 @@ gSystemConfig.configContentBindRegisterUserSort = "name"; //options: name | name
 //Products - configuration and resources.
 //**************************************************************************************
 gSystemConfig.configProductsSort = "sort_order"; //options: id | sort_order | date_creation esc | date_creation desc | title
-gSystemConfig.enableProductsSortCustom = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsSortCustom = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInputOrder = [/*"inputRowProducts_id_parent", 
                                             "inputRowProducts_sort_order", 
                                             "inputRowProducts_date1", 
@@ -834,7 +834,7 @@ gSystemConfig.configProductsInputOrder = [/*"inputRowProducts_id_parent",
 //Basic resources.
 gSystemConfig.enableProductsIdParentEdit = 0; //0 - disable | 1 - enable
 gSystemConfig.enableProductsSortOrder = 1; //0 - disable | 1 - enable
-gSystemConfig.enableProductsType = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsType = 0; //0 - disable | 1 - enable
 gSystemConfig.enableProductsCode = 1; //0 - disable | 1 - enable
 gSystemConfig.enableProductsDescription = 1; //0 - disable | 1 - enable
 gSystemConfig.enableProductsValue = 0; //0 - disable | 1 - enable
@@ -902,10 +902,10 @@ gSystemConfig.configProductsBindRegister5Sort = "name"; //options: name | name_f
 //Optional fields (field titles in the language configuration file).
 //----------------------
 //Generic filters.
-gSystemConfig.enableProductsFilterGeneric1 = 3; //0 - disable | 1 - checkbox | 2 - listbox | 3 - dropdown | 4 - radio
-gSystemConfig.enableProductsFilterGeneric2 = 3; //0 - disable | 1 - checkbox | 2 - listbox | 3 - dropdown | 4 - radio
-gSystemConfig.enableProductsFilterGeneric3 = 3; //0 - disable | 1 - checkbox | 2 - listbox | 3 - dropdown | 4 - radio
-gSystemConfig.enableProductsFilterGeneric4 = 3; //0 - disable | 1 - checkbox | 2 - listbox | 3 - dropdown | 4 - radio
+gSystemConfig.enableProductsFilterGeneric1 = 1; //0 - disable | 1 - checkbox | 2 - listbox | 3 - dropdown | 4 - radio
+gSystemConfig.enableProductsFilterGeneric2 = 1; //0 - disable | 1 - checkbox | 2 - listbox | 3 - dropdown | 4 - radio
+gSystemConfig.enableProductsFilterGeneric3 = 1; //0 - disable | 1 - checkbox | 2 - listbox | 3 - dropdown | 4 - radio
+gSystemConfig.enableProductsFilterGeneric4 = 1; //0 - disable | 1 - checkbox | 2 - listbox | 3 - dropdown | 4 - radio
 gSystemConfig.enableProductsFilterGeneric5 = 0; //0 - disable | 1 - checkbox | 2 - listbox | 3 - dropdown | 4 - radio
 gSystemConfig.enableProductsFilterGeneric6 = 0; //0 - disable | 1 - checkbox | 2 - listbox | 3 - dropdown | 4 - radio
 gSystemConfig.enableProductsFilterGeneric7 = 0; //0 - disable | 1 - checkbox | 2 - listbox | 3 - dropdown | 4 - radio
@@ -935,64 +935,64 @@ gSystemConfig.enableProductsFilterGeneric30 = 0; //0 - disable | 1 - checkbox | 
 
 
 //Big information fields.
-gSystemConfig.enableProductsInfo1 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo1 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo1FieldType = 12; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo2 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo2 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo2FieldType = 11; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo3 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo3 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo3FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo4 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo4 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo4FieldType = 2; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo5 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo5 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo5FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo6 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo6 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo6FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo7 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo7 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo7FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo8 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo8 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo8FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo9 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo9 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo9FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo10 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo10 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo10FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo11 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo11 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo11FieldType = 12; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo12 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo12 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo12FieldType = 11; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo13 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo13 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo13FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo14 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo14 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo14FieldType = 2; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo15 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo15 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo15FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo16 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo16 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo16FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo17 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo17 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo17FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo18 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo18 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo18FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo19 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo19 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo19FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
-gSystemConfig.enableProductsInfo20 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfo20 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfo20FieldType = 1; //1 - single line | 2 - multiline | 11 - single (encrypted) | 12 - multiline (encrypted)
 
 //Small information fields.
@@ -1011,7 +1011,7 @@ gSystemConfig.configProductsInfoS4FieldType = 1; //1 - single line | 2 - multili
 gSystemConfig.enableProductsInfoS5 = 1; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfoS5FieldType = 1; //1 - single line | 2 - multiline
 
-gSystemConfig.enableProductsInfoS6 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsInfoS6 = 2; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfoS6FieldType = 1; //1 - single line | 2 - multiline
 
 gSystemConfig.enableProductsInfoS7 = 2; //0 - disable | 1 - enable
@@ -1087,19 +1087,19 @@ gSystemConfig.enableProductsInfoS30 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfoS30FieldType = 1; //1 - single line | 2 - multiline
 
 //Big number fields (up to 34 digits).
-gSystemConfig.enableProductsNumber1 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsNumber1 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsNumber1FieldType = 1; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
 
-gSystemConfig.enableProductsNumber2 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsNumber2 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsNumber2FieldType = 1; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
 
-gSystemConfig.enableProductsNumber3 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsNumber3 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsNumber3FieldType = 1; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
 
-gSystemConfig.enableProductsNumber4 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsNumber4 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsNumber4FieldType = 1; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
 
-gSystemConfig.enableProductsNumber5 = 1; //0 - disable | 1 - enable
+gSystemConfig.enableProductsNumber5 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsNumber5FieldType = 1; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
 
 //Small number fields (up to 9 digits).
@@ -1417,7 +1417,7 @@ gSystemConfig.configFormsBindRegisterUserIDReference = 3892; //category ID / reg
 gSystemConfig.configFormsBindRegisterUserSort = "name"; //options: name | name_first | name_last | name_company | date_register esc | date_register desc | sort_order
 
 gSystemConfig.enableFormsRecipientEmailCopy = 0; //0 - disable | 1 - enable
-gSystemConfig.enableFormsSender = 1; //0 - disable | 1 - enable
+gSystemConfig.enableFormsSender = 0; //0 - disable | 1 - enable
 gSystemConfig.enableFormsSenderConfig = 0; //0 - disable | 1 - enable
 gSystemConfig.enableFormsEmailFormat = 0; //0 - disable | 1 - enable
 gSystemConfig.enableFormsMessageSuccess = 1; //0 - disable | 1 - enable
@@ -1461,7 +1461,7 @@ gSystemConfig.configFormsFieldsInfoS5FieldType = 1; //1 - single line | 2 - mult
 //Forms fields options.
 gSystemConfig.enableFormsFieldsOptionsSortOrder = 1; //0 - disable | 1 - enable
 gSystemConfig.enableFormsFieldsOptionsConfigSelection = 0; //0 - disable | 1 - enable
-gSystemConfig.enableFormsFieldsOptionsImageMain = 0; //0 - disable | 1 - enable
+gSystemConfig.enableFormsFieldsOptionsImageMain = 1; //0 - disable | 1 - enable
 
 //Optional fields (field titles in the language configuration file).
 //Small information fields.
@@ -1529,7 +1529,7 @@ gSystemConfig.configFiltersGenericInputOrder = [/*"inputRowFiltersGeneric_id_par
 //Basic resources.
 gSystemConfig.enableFiltersGenericSortOrder = 1; //0 - disable | 1 - enable
 gSystemConfig.enableFiltersGenericDescription = 0; //0 - disable | 1 - enable
-gSystemConfig.enableFiltersGenericImageMain = 0; //0 - disable | 1 - enable
+gSystemConfig.enableFiltersGenericImageMain = 1; //0 - disable | 1 - enable
 gSystemConfig.enableFiltersGenericConfigSelection = 0; //0 - disable | 1 - enable
 gSystemConfig.enableFiltersGenericNotes = 0; //0 - disable | 1 - enable
 //TODO: change name on DB
@@ -1613,7 +1613,7 @@ gSystemConfig.configUsersAuthenticationCheck = 1; //0 - only checks if the cooki
 
 //Basic resources.
 gSystemConfig.enableUsersSortOrder = 0; //0 - disable | 1 - enable
-gSystemConfig.enableUsersType = 0; //0 - disable | 1 - enable
+gSystemConfig.enableUsersType = 1; //0 - disable | 1 - enable
 
 gSystemConfig.enableUsersNameTitle = 0; //0 - disable | 1 - enable
 gSystemConfig.enableUsersNameFull = 1; //0 - disable | 1 - enable
@@ -1634,7 +1634,7 @@ gSystemConfig.enableUsersEmail = 1; //0 - disable | 1 - enable
 gSystemConfig.configUsersPassword = 1; //0 - don´t display | 1 - display
 gSystemConfig.configUsersPasswordMethod = 26; //23 - Crypto Module algorithm: aes-128-cbc and simple key password | 24 - Crypto Module algorithm: aes-128-cbc - 16 byte key and 16 byte iv | 26 - Crypto Module algorithm: aes-256-cbc - 32 byte key and 16 byte iv
 
-gSystemConfig.enableUsersImageMain = 0; //0 - disable | 1 - enable
+gSystemConfig.enableUsersImageMain = 1; //0 - disable | 1 - enable
 gSystemConfig.enableUsersStatus = 0; //0 - disable | 1 - enable
 gSystemConfig.enableUsersNotes = 0; //0 - disable | 1 - enable
 

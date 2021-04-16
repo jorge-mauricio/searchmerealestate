@@ -1,7 +1,7 @@
 <?php
 //DB System.
 //**************************************************************************************
-$dbSystemHost = "192.96.210.56";
+$dbSystemHost = "192.175.105.180";//192.96.210.56 (sectorlink doesn´t accept outside connections)
 $dbSystemDataBase = "db_rel_smre";
 $dbSystemUser = "searchmereal";
 $dbSystemPassword = "seMia#0504";

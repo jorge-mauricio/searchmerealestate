@@ -232,7 +232,7 @@ exports.appLabels = {
     //Categories - Type.
     //**************************************************************************************
     backendCategoriesType1Function: "Manage Content",
-    backendCategoriesType2Function: "Manage Products",
+    backendCategoriesType2Function: "Manage Real Estate",
     backendCategoriesType3Function: "Manage News",
     backendCategoriesType4Function: "Manage Photo Gallery",
     backendCategoriesType5Function: "Manage Articles",
