@@ -514,6 +514,7 @@ class FrontendContentListing extends Component
         //elementMessage01("titleCurrent", this.titleCurrent); //working
         //console.log("FunctionsSyncSystem=", FunctionsSyncSystem);
         FunctionsSyncSystem.elementMessage01("titleCurrent", this.titleCurrent);
+        FunctionsSyncSystem.elementMessage01("titleCurrentMobile", this.titleCurrent);
     }
     //**************************************************************************************
 

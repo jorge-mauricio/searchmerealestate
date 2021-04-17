@@ -1087,36 +1087,36 @@ gSystemConfig.enableProductsInfoS30 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfoS30FieldType = 1; //1 - single line | 2 - multiline
 
 //Big number fields (up to 34 digits).
-gSystemConfig.enableProductsNumber1 = 0; //0 - disable | 1 - enable
-gSystemConfig.configProductsNumber1FieldType = 1; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
+gSystemConfig.enableProductsNumber1 = 1; //0 - disable | 1 - enable
+gSystemConfig.configProductsNumber1FieldType = 2; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
 
-gSystemConfig.enableProductsNumber2 = 0; //0 - disable | 1 - enable
-gSystemConfig.configProductsNumber2FieldType = 1; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
+gSystemConfig.enableProductsNumber2 = 1; //0 - disable | 1 - enable
+gSystemConfig.configProductsNumber2FieldType = 2; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
 
-gSystemConfig.enableProductsNumber3 = 0; //0 - disable | 1 - enable
-gSystemConfig.configProductsNumber3FieldType = 1; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
+gSystemConfig.enableProductsNumber3 = 1; //0 - disable | 1 - enable
+gSystemConfig.configProductsNumber3FieldType = 2; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
 
-gSystemConfig.enableProductsNumber4 = 0; //0 - disable | 1 - enable
-gSystemConfig.configProductsNumber4FieldType = 1; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
+gSystemConfig.enableProductsNumber4 = 1; //0 - disable | 1 - enable
+gSystemConfig.configProductsNumber4FieldType = 2; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
 
-gSystemConfig.enableProductsNumber5 = 0; //0 - disable | 1 - enable
-gSystemConfig.configProductsNumber5FieldType = 1; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
+gSystemConfig.enableProductsNumber5 = 1; //0 - disable | 1 - enable
+gSystemConfig.configProductsNumber5FieldType = 2; //1 - general number | 2 - system currency | 3 - decimal | 4 - system currency with decimals
 
 //Small number fields (up to 9 digits).
 gSystemConfig.enableProductsNumberS1 = 1; //0 - disable | 1 - enable
-gSystemConfig.configProductsNumberS1FieldType = 2; //1 - general number | 2 - system currency
+gSystemConfig.configProductsNumberS1FieldType = 1; //1 - general number | 2 - system currency
 
 gSystemConfig.enableProductsNumberS2 = 1; //0 - disable | 1 - enable
-gSystemConfig.configProductsNumberS2FieldType = 2; //1 - general number | 2 - system currency
+gSystemConfig.configProductsNumberS2FieldType = 1; //1 - general number | 2 - system currency
 
 gSystemConfig.enableProductsNumberS3 = 1; //0 - disable | 1 - enable
-gSystemConfig.configProductsNumberS3FieldType = 2; //1 - general number | 2 - system currency
+gSystemConfig.configProductsNumberS3FieldType = 1; //1 - general number | 2 - system currency
 
-gSystemConfig.enableProductsNumberS4 = 1; //0 - disable | 1 - enable
-gSystemConfig.configProductsNumberS4FieldType = 2; //1 - general number | 2 - system currency
+gSystemConfig.enableProductsNumberS4 = 0; //0 - disable | 1 - enable
+gSystemConfig.configProductsNumberS4FieldType = 1; //1 - general number | 2 - system currency
 
-gSystemConfig.enableProductsNumberS5 = 1; //0 - disable | 1 - enable
-gSystemConfig.configProductsNumberS5FieldType = 2; //1 - general number | 2 - system currency
+gSystemConfig.enableProductsNumberS5 = 0; //0 - disable | 1 - enable
+gSystemConfig.configProductsNumberS5FieldType = 1; //1 - general number | 2 - system currency
 
 //URLs.
 gSystemConfig.enableProductsURL1 = 1; //0 - disable | 1 - enable

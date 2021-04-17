@@ -42,8 +42,8 @@
 	/*--ssFrontendDefaultFont: "Times New Roman", Times, serif;*/
 
 	--ssFrontendDefaultFontSize: 13px;
-	--ssFrontendDefaultTitleFontSize: 20px;
-	--ssFrontendDefaultSubheadingFontSize: 16px;
+	--ssFrontendDefaultTitleFontSize: 30px;
+	--ssFrontendDefaultSubheadingFontSize: 26px;
 	--ssFrontendDefaultCaptionFontSize: 11px;
 
 
@@ -591,12 +591,12 @@ input, textarea, select
 
 .ss-frontend-btn-action {
 	color: #ffffff;
-	background-color: #78c3ae; 
+	background-color:#0082c6; 
 
 }
 .ss-frontend-btn-action:hover {
 	color: #ffffff;
-	background-color: #0000ff; 
+	background-color:#a2b9c6; 
 }
 
 .ss-frontend-btn-action-alert {
@@ -606,7 +606,7 @@ input, textarea, select
 }
 .ss-frontend-btn-action-alert:hover {
 	color: #ffffff;
-	background-color: #0000ff; 
+	background-color:#a2b9c6; 
 }
 
 .ss-frontend-btn-action-cancel {
@@ -616,7 +616,7 @@ input, textarea, select
 }
 .ss-frontend-btn-action-cancel:hover {
 	color: #ffffff;
-	background-color: #0000ff; 
+	background-color: #a2b9c6; 
 }
 
 .ss-frontend-btn-action-execute {
@@ -626,7 +626,7 @@ input, textarea, select
 }
 .ss-frontend-btn-action-execute:hover {
 	color: #ffffff;
-	background-color: #0000ff; 
+	background-color: #a2b9c6; 
 }
 
 .ss-frontend-btn-contact {
@@ -830,10 +830,6 @@ input, textarea, select
 	line-height: normal;
 	padding-right: inherit;
 }
-
-
-
-
 /* ************************************************************************************** */
 
 
@@ -1337,7 +1333,7 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultTitleFontSize);
 	font-weight: bold;
-	color: #78c3ae;
+	color: #0082c6;
 
 	/*margin: 0px; 
 	padding: 0px;
@@ -1351,7 +1347,7 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultSubheadingFontSize);
 	font-weight: bold;
-	color: #000000;
+	color: #0082c6;
 
 	/*margin: 0px; 
 	padding: 0px;
@@ -1364,9 +1360,9 @@ input, textarea, select
 
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
-	line-height: 17px;
+	line-height: 18px;
 	font-weight: normal;
-	color: #000000;
+	color:#596369;
 
 	/*margin: 0px; 
 	padding: 0px;*/
@@ -1383,7 +1379,7 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultCaptionFontSize);
 	font-weight: normal;
-	color: #000000;
+	color: #596369;
 
 	margin: 0px; 
 	padding: 0px;
@@ -1394,14 +1390,14 @@ input, textarea, select
 	font-size: var(--ssFrontendDefaultFontSize);
 	line-height: 17px;
 	font-weight: normal;
-	color: #78c3ae;
+	color:#0082c6;
 }
 .ss-frontend-content-links:hover {
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
 	line-height: 17px;
 	font-weight: normal;
-	color: #ff0000;
+	color:#a2b9c6;
 }
 
 /*Images*/
@@ -1592,7 +1588,7 @@ input, textarea, select
 	font-size: var(--ssFrontendDefaultSubheadingFontSize);
 	font-weight: bold;
 
-	color: #78c3ae;
+	color: #0082c6;
 }
 
 .ss-frontend-products-listing-text01 {
@@ -1614,10 +1610,10 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
 	text-decoration: none;
-	color: #78c3ae;
+	color: #0082c6;
 }
 .ss-frontend-products-listing-link01:hover {
-    color: #0000ff;
+    color: #a2b9c6;
 }
 
 .ss-frontend-products-listing-content-row01 {
@@ -1720,16 +1716,16 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
 	text-decoration: none;
-	color: #78c3ae;
+	color:#0082c6;
 }
 .ss-frontend-products-details-link01:hover {
-    color: #0000ff;
+    color:#a2b9c6;
 }
 
 .ss-frontend-products-details-text01 {
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
-	color: #000000;
+	color:#596369;
 }
 
 .ss-frontend-products-details-subheading01 {
@@ -1740,7 +1736,7 @@ input, textarea, select
 	font-size: var(--ssFrontendDefaultSubheadingFontSize);
 	font-weight: bold;
 
-	color: #78c3ae;
+	color: #0082c6;
 }
 
 .ss-frontend-products-details-content-row01 {
@@ -1836,7 +1832,7 @@ input, textarea, select
 	position: relative;
 	display: block; /*inline-block - respects text-align center from container*/
 
-	border: 1px solid #78c3ae;
+	border: 1px solid #0082c6;
 	margin: auto;
 	clear: both;
 }
@@ -1856,7 +1852,7 @@ input, textarea, select
 	position: relative;
 	display: inline-block; /*inline-block - respects text-align center from container*/
 
-	border: 1px solid #78c3ae;
+	border: 1px solid #0082c6;
 }
 
 
@@ -1866,17 +1862,17 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
 
-	color: #78c3ae;
+	color:#596369;
 }
 
 .ss-frontend-products-pagination-link {
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
 	text-decoration: none;
-	color: #78c3ae;
+	color:#0082c6;
 }
 .ss-frontend-products-pagination-link:hover {
-	color: #0000ff;
+	color:#a2b9c6;
 }
 /* ************************************************************************************** */
 
@@ -2407,7 +2403,7 @@ input, textarea, select
 
 .ss-frontend-forms-title01 {
 	position: relative;
-	display: block;
+	display: none;
 
     width: 100%;
 	/*height: 30px;*/
@@ -2416,10 +2412,10 @@ input, textarea, select
 	font-size: var(--ssFrontendDefaultTitleFontSize);
 	font-weight: bold;
     line-height: inherit;
-	color: #78c3ae;
+	color: #0082c6;
 
     border: 0px;
-    /*border-bottom: 0px solid #78c3ae;*/
+    /*border-bottom: 0px solid #0082c6;*/
 
     padding: 0px;
     margin: 0px;
@@ -2427,14 +2423,14 @@ input, textarea, select
 .ss-frontend-forms-text01 {
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
-	color: #000000;
+	color: #596369;
 }
 
 .ss-frontend-forms-label01 {
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
 	font-weight: bold;
-	color: #000000;
+	color: #596369;
 
 	text-align: right;
 
@@ -2445,7 +2441,7 @@ input, textarea, select
 
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
-	color: #000000;
+	color: #596369;
 }
 .ss-frontend-forms-heading-title {
 	/*position: relative;
@@ -2454,7 +2450,7 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultTitleFontSize);
 	font-weight: bold;
-	color: #78c3ae;
+	color: #0082c6;
 
 	/*margin: 0px; 
 	padding: 0px;
@@ -2468,7 +2464,7 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultSubheadingFontSize);
 	font-weight: bold;
-	color: #78c3ae;
+	color: #0082c6;
 
 	/*margin: 0px; 
 	padding: 0px;
@@ -2529,10 +2525,10 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
     font-size: var(--ssFrontendDefaultFontSize);
 
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 
 .ss-frontend-forms-field-text02 {
@@ -2542,10 +2538,10 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
     font-size: var(--ssFrontendDefaultFontSize);
 
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 
 .ss-frontend-forms-field-file-upload {
@@ -2555,10 +2551,10 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
     font-size: var(--ssFrontendDefaultFontSize);
 
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 
 .ss-frontend-forms-field-numeric {
@@ -2569,10 +2565,10 @@ input, textarea, select
     font-size: var(--ssFrontendDefaultFontSize);
 	text-align: right;
 
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 
 .ss-frontend-forms-field-numeric01 {
@@ -2583,10 +2579,10 @@ input, textarea, select
     font-size: var(--ssFrontendDefaultFontSize);
 	text-align: right;
 
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 
 .ss-frontend-forms-field-numeric02 {
@@ -2597,10 +2593,10 @@ input, textarea, select
     font-size: var(--ssFrontendDefaultFontSize);
 	text-align: right;
 	
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 
 .ss-frontend-forms-field-currency01 {
@@ -2611,10 +2607,10 @@ input, textarea, select
     font-size: var(--ssFrontendDefaultFontSize);
 	text-align: right;
 	
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 .ss-frontend-forms-field-text-area01 {
     width: 230px;
@@ -2623,10 +2619,10 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
     font-size: var(--ssFrontendDefaultFontSize);
 
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 
 .ss-frontend-forms-field-date01 {
@@ -2636,10 +2632,10 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
     font-size: var(--ssFrontendDefaultFontSize);
 
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 
 .ss-frontend-forms-field-tel01 {
@@ -2649,10 +2645,10 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
     font-size: var(--ssFrontendDefaultFontSize);
 
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 .ss-frontend-forms-field-tel-ac01 {
     width: 30px;
@@ -2661,10 +2657,10 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
     font-size: var(--ssFrontendDefaultFontSize);
 
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 
 .ss-frontend-forms-field-dropdown01 {
@@ -2676,10 +2672,10 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
     font-size: var(--ssFrontendDefaultFontSize);
 
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 
 .ss-frontend-forms-field-listbox01 {
@@ -2690,10 +2686,10 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
     font-size: var(--ssFrontendDefaultFontSize);
 
-	color: #000000;
+	color: #596369;
 	background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #0082c6;
 }
 
 .ss-frontend-forms-field-checkbox {
@@ -2762,6 +2758,34 @@ input, textarea, select
 /*Forms.*/
 .control-label {
 	font-weight: bold;
+}
+
+
+/*Banners.*/
+.carousel-fade .carousel-item {
+	opacity: 0;
+	transition-duration: .6s;
+	transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+	opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+	opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+	transform: translateX(0);
+	transform: translate3d(0, 0, 0);
 }
 
 

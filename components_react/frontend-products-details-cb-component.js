@@ -269,7 +269,11 @@ class FrontendProductsDetails extends Component
 
 
         //Title Current.
-        FunctionsSyncSystem.elementMessage01("titleCurrent", this.titleCurrent);
+        //FunctionsSyncSystem.elementMessage01("titleCurrent", this.titleCurrent);
+        //FunctionsSyncSystem.elementMessage01("titleCurrentMobile", this.titleCurrent);
+
+        FunctionsSyncSystem.elementMessage01("titleCurrent", "Details");
+        FunctionsSyncSystem.elementMessage01("titleCurrentMobile", "Details");
     }
     //**************************************************************************************
 

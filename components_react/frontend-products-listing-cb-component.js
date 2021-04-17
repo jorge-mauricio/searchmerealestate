@@ -37,6 +37,7 @@ if (typeof window !== 'undefined') {
 
 //Components.
 import FrontendProductsListingRecord from "./frontend-products-listing-record-cb-component.js";
+import FrontendContent from "./frontend-content-cb-component.js";
 //----------------------
 
 
@@ -453,6 +454,7 @@ class FrontendProductsListing extends Component
 
         //Title Current.
         FunctionsSyncSystem.elementMessage01("titleCurrent", this.titleCurrent);
+        FunctionsSyncSystem.elementMessage01("titleCurrentMobile", this.titleCurrent);
     }
     //**************************************************************************************
 
@@ -500,11 +502,36 @@ class FrontendProductsListing extends Component
         return(
             <React.Fragment>
                 <section className="ss-frontend-layout-section-content01">
-                    { /*Products records.*/ }
-                    <FrontendProductsListingRecord 
-                        arrProductsListing={ this.state.arrProductsListing } 
-                        configLayoutType={ 33 }>
-                    </FrontendProductsListingRecord>
+                    { /*Content.*/ }
+                    <div style={{marginBottom: "30px"}}>
+                        <FrontendContent 
+                            idParentContent={ "147" } 
+                            idTbContent={ "" } 
+                            contentType={ "" } 
+                            configLayoutType={ 2 } 
+                            configContentNRecords={ "" } 
+                            configContentSort={ "" }>
+                                {/*arrCategoriesListing={ this.arrCategoriesListing } also works*/}
+                        </FrontendContent>
+                    </div>
+
+
+                    <div className="d-none d-lg-block ss-frontend-layout-section-content01">
+                        { /*Products records.*/ }
+                        <FrontendProductsListingRecord 
+                            arrProductsListing={ this.state.arrProductsListing } 
+                            configLayoutType={ 4 }>
+                        </FrontendProductsListingRecord>
+                    </div>
+                
+                
+                    <div className="d-lg-none" style={{position: 'relative', display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', margin: '0px 0px 25px 0px', overflow: 'visible'}}>
+                        { /*Products records.*/ }
+                        <FrontendProductsListingRecord 
+                            arrProductsListing={ this.state.arrProductsListing } 
+                            configLayoutType={ 4 }>
+                        </FrontendProductsListingRecord>
+                    </div>
 
 
                     { /*pagination.*/ }

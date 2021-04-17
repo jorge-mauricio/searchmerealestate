@@ -479,18 +479,16 @@ class LayoutFrontendMain extends Component
 
                             {/*Banner*/}
                             { this.props.location.pathname == "/" ?
-                                <div style={{position: 'relative', display: 'block', height: '525px', backgroundColor: '#999', overflow: 'hidden'}}>
-                                    <FrontendBanners
-                                        idParentBanners={""} 
-                                        idTbCategories={""} 
-                                        configLayoutType={22} 
-                                        configDisplay={"horizontal"} 
-                                        configContentNRecords={""} 
-                                        configContentSort={""}
-                                        >
+                                <FrontendBanners
+                                    idParentBanners={""} 
+                                    idTbCategories={""} 
+                                    configLayoutType={22} 
+                                    configDisplay={"horizontal"} 
+                                    configContentNRecords={""} 
+                                    configContentSort={""}
+                                    >
 
-                                    </FrontendBanners>
-                                </div>
+                                </FrontendBanners>
                             :
                                 ``
                             }
@@ -625,7 +623,6 @@ class LayoutFrontendMain extends Component
                         </div>
 
 
-
                         {/*Mobile layout.*/}
                         <div className="d-lg-none" style={{position: 'relative', minHeight: '100%'}}>
                             <header style={{position: 'relative', display: 'block', height: '45px', background: '#0082c6'}}>
@@ -678,18 +675,20 @@ class LayoutFrontendMain extends Component
                             </a> 
 
                             {/*Banner.*/}
-                            <div style={{position: 'relative', display: 'block', height: '275px'/*, backgroundColor: '#cccccc'*/}}>
+                            { this.props.location.pathname == "/" ?
                                 <FrontendBanners
                                     idParentBanners={""} 
                                     idTbCategories={""} 
                                     configLayoutType={22} 
-                                    configDisplay={"horizontal-mobile"} 
+                                    configDisplay={"horizontal"} 
                                     configContentNRecords={""} 
                                     configContentSort={""}
                                     >
 
                                 </FrontendBanners>
-                            </div>
+                            :
+                                ``
+                            }
                             {/*Banner.*/}
 
                             

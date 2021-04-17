@@ -666,7 +666,7 @@ class FrontendHome extends Component
                                         </div>
                                     </div>
 
-                                    <div style={{position: 'relative', display: 'block', width: '50%', height: '465px', backgroundImage: 'url(/files-layout/layout-desktop-locations-rj.jpg)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', clear: 'both'}}>
+                                    <div style={{position: 'relative', display: 'block', width: '50%', height: '465px', backgroundImage: 'url(/files-layout/layout-desktop-locations-rj.jpg)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center top', clear: 'both'}}>
                                         <div style={{position: 'absolute', display: 'flex', alignItems: 'center', textAlign: 'right', top: '0px', right: '-507px', width: '490px', height: '100%'}}>
                                             <div>
                                                 <div className="ss-frontend-heading03">
@@ -708,7 +708,7 @@ class FrontendHome extends Component
                                         idParentProducts={"108"} 
                                         idRegisterUser={""} 
 
-                                        configLayoutType={2} 
+                                        configLayoutType={4} 
                                         configProductsNRecords={"3"} 
                                         configProductsSort={gSystemConfig.configProductsSort} 
 
@@ -890,7 +890,7 @@ class FrontendHome extends Component
                                         </div>
                                     </div>
 
-                                    <div style={{position: 'relative', display: 'block', width: '100%', height: '150px', backgroundImage: 'url(/files-layout/layout-desktop-locations-rj.jpg)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: 'cover'}}>
+                                    <div style={{position: 'relative', display: 'block', width: '100%', height: '150px', backgroundImage: 'url(/files-layout/layout-desktop-locations-rj.jpg)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center top', backgroundSize: 'cover'}}>
                                     
                                     </div>
 
@@ -927,7 +927,7 @@ class FrontendHome extends Component
                                         idParentProducts={"108"} 
                                         idRegisterUser={""} 
 
-                                        configLayoutType={2} 
+                                        configLayoutType={4} 
                                         configProductsNRecords={"3"} 
                                         configProductsSort={gSystemConfig.configProductsSort} 
 

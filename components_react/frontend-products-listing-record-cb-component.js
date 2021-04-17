@@ -27,7 +27,7 @@ class FrontendProductsListingRecord extends Component
     constructor(props, context)
     {
         //Component options.
-        //configLayoutType: 1 - table listing (custom) | 2 - div layout (custom) | 3 - div row (custom) | 11 - table listing (bootstrap) | 22 - div layout (bootstrap) | 33 - div row (bootstrap) | 111 - table listing (dashboard - custom) 
+        //configLayoutType: 1 - table listing (custom) | 2 - div layout (custom) | 3 - div row (custom) | 4 - div (responsive) | 11 - table listing (bootstrap) | 22 - div layout (bootstrap) | 33 - div row (bootstrap) | 111 - table listing (dashboard - custom) 
 
 
         super(props, context);
@@ -557,6 +557,151 @@ class FrontendProductsListingRecord extends Component
                                     </div>
                                 </article>
                                 //record
+                            );
+                        }) }
+                    </React.Fragment>
+                );
+            }else{
+                //Output - empty.
+                return(
+                    <div className="ss-frontend-alert">
+                        { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "frontendMessageProductsEmpty") }
+                    </div>
+                );
+            }
+        }
+        //----------------------
+
+
+        //div layout (responsive).
+        //----------------------
+        if(configLayoutType == 4)
+        {
+            if(arrProductsListing.length > 0)
+            {
+                //Output.
+                return(
+                    <React.Fragment>
+                        { arrProductsListing.map((productsRow, productsRowKey) =>{
+                            return (
+                                <React.Fragment>
+                                    {/*Desktop.
+                                    <div className="d-none d-lg-block">
+
+                                    </div>*/}
+                                    <article key={productsRowKey} className="d-none d-lg-block ss-frontend-products-listing-text01" style={{position: 'relative', display: 'block', width: '100%', height: '240px', backgroundColor: '#0082c6', backgroundImage: 'url(/files-layout/frontend-desktop-product-element02.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'right top', marginBottom: '45px'}}>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/" + gSystemConfig.configRouteFrontendDetails + "/" + productsRow.id } 
+                                            title={ SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.title, "db") }  
+                                            style={{position: 'relative', display: 'inline-block', width: '360px', height: '100%', backgroundColor: '#999', verticalAlign: 'top', backgroundImage: 'url('+ gSystemConfig.configFrontendReactURLImages + gSystemConfig.configDirectoryFilesSD + "/t" + productsRow.image_main +')', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
+                                        
+                                        </a>
+
+                                        <img src="/files-layout/frontend-desktop-product-element01.png" alt="Element" style={{position: 'relative', display: 'inline-block', verticalAlign: 'top', marginLeft: '-57px'}} />
+                                        
+                                        <div style={{position: 'relative', display: 'inline-block', width: '530px', height: '205px', marginLeft: '-20px', marginTop: '15px'}}>
+                                            <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/" + gSystemConfig.configRouteFrontendDetails + "/" + productsRow.id }
+                                                title={ SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.title, "db") }  
+                                                className="ss-frontend-products-listing-title-link01">
+                                                { SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.title, "db") }
+                                            </a>
+
+                                            <div style={{position: 'relative', display: 'block', fontSize: '16px', marginTop: '4px'}}>
+                                                { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small1, "db")) }, 
+                                                { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small2, "db")) }, 
+                                                { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small3, "db")) }, 
+                                                { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small5, "db")) }
+                                            </div>
+
+                                            <p style={{position: 'relative', display: 'block', fontSize: '18px', marginTop: '4px'}}>
+                                                { /*SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.description, "db")TODO: limit characters*/ }
+                                            </p>
+
+                                            <div style={{position: 'absolute', display: 'block', bottom: '0px', left: '57px', width: '30px', height: '30px', lineHeight: '30px', fontSize: '20px', textAlign: 'center', border: '1px solid #ffffff', borderRadius: '5px'}}>
+                                                { productsRow.number_small1 }
+                                                <img src="/files-layout/frontend-icon-room.png" alt="Room" style={{position: 'absolute', display: 'block', bottom: '0px', left: '-57px'}} />
+                                            </div>
+
+                                            <div style={{position: 'absolute', display: 'block', bottom: '0px', left: '130px', width: '30px', height: '30px', lineHeight: '30px', fontSize: '20px', textAlign: 'center', border: '1px solid #ffffff', borderRadius: '5px'}}>
+                                                { productsRow.number_small2 }
+                                                <img src="/files-layout/frontend-icon-bathroom.png" alt="Bathroom" style={{position: 'absolute', display: 'block', bottom: '0px', left: '-30px'}} />
+                                            </div>
+
+                                            <div style={{position: 'absolute', display: 'block', bottom: '0px', left: '220px', width: '30px', height: '30px', lineHeight: '30px', fontSize: '20px', textAlign: 'center', border: '1px solid #ffffff', borderRadius: '5px'}}>
+                                                { productsRow.number_small3 }
+                                                <img src="/files-layout/frontend-icon-garage.png" alt="Garage" style={{position: 'absolute', display: 'block', bottom: '0px', left: '-45px'}} />
+                                            </div>
+
+                                            <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/" + gSystemConfig.configRouteFrontendDetails + "/" + productsRow.id } 
+                                                title={ SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "backendItemDetails") + " - " + SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.title, "db") }  
+                                                className="ss-frontend-products-details" 
+                                                style={{position: 'absolute', display: 'block', bottom: '0px', right: '0px'}}>
+                                                { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "backendItemDetails") }
+                                            </a>
+                                        </div>
+
+                                        <div className="ss-frontend-products-listing-text03" style={{position: 'absolute', display: 'block', right: '-10px', top: '50%', transform: 'translate(0, -50%)', msTransform: 'rotate(-90deg)', /* ie 9 */ WebkitTransform: 'rotate(-90deg)', /* safari prior 9.0 */ transform: 'rotate(-90deg)'}}>
+                                            Sale
+                                        </div>
+                                    </article>
+                                    
+
+                                    {/*Mobile.
+                                    <div className="d-lg-none">
+
+                                    </div>
+                                    */}
+                                    <article className="d-lg-none ss-frontend-products-listing-text01" style={{position: 'relative', display: 'block', width: '300px', height: '540px', textAlign: 'center', backgroundColor: '#0082c6', backgroundImage: 'url(/files-layout/frontend-mobile-product-element02.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center bottom', marginBottom: '30px'}}>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/" + gSystemConfig.configRouteFrontendDetails + "/" + productsRow.id } 
+                                            title={ SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.title, "db") }  
+                                            style={{position: 'relative', display: 'block', width: '100%', height: '200px', backgroundImage: 'url('+ gSystemConfig.configFrontendReactURLImages + gSystemConfig.configDirectoryFilesSD + "/t" + productsRow.image_main +')', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
+                                        
+                                        </a>
+
+                                        <img src="/files-layout/frontend-mobile-product-element01.png" alt="Element" style={{position: 'relative', display: 'block', marginTop: '-80px'}} />
+                                        
+                                        <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/" + gSystemConfig.configRouteFrontendDetails + "/" + productsRow.id } 
+                                            title={ SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.title, "db") }  
+                                            className="ss-frontend-products-listing-title-link01" style={{fontSize: '18px', lineHeight: '24px', margin: '-35px 10px 0px 10px'}}>
+                                            Project title and some more information in two lines
+                                        </a>
+
+                                        <div style={{position: 'relative', display: 'block', fontSize: '14px', lineHeight: '17px', margin: '4px 10px 0px 10px'}}>
+                                            { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small1, "db")) }, 
+                                            { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small2, "db")) }, 
+                                            { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small3, "db")) }, 
+                                            { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small5, "db")) }
+                                        </div>
+
+                                        <p style={{position: 'relative', display: 'block', fontSize: '14px', lineHeight: '17px', margin: '4px 10px 0px 10px'}}>
+                                            { /*SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.description, "db")TODO: limit characters*/ }
+                                        </p>
+
+                                        <div style={{position: 'relative', display: 'block', margin: '10px 10px 5px 60px'}}>
+                                            <div style={{position: 'relative', display: 'inline-block', width: '30px', height: '30px', lineHeight: '30px', fontSize: '20px', textAlign: 'center', border: '1px solid #ffffff', borderRadius: '5px'}}>
+                                                { productsRow.number_small1 }
+                                                <img src="/files-layout/frontend-icon-room.png" alt="Room" style={{position: 'absolute', display: 'block', bottom: '0px', left: '-57px'}} />
+                                            </div>
+                                            <div style={{position: 'relative', display: 'inline-block', width: '30px', height: '30px', lineHeight: '30px', fontSize: '20px', textAlign: 'center', border: '1px solid #ffffff', borderRadius: '5px', marginLeft: '35px'}}>
+                                                { productsRow.number_small2 }
+                                                <img src="/files-layout/frontend-icon-bathroom.png" alt="Bathroom" style={{position: 'absolute', display: 'block', bottom: '0px', left: '-30px'}} />
+                                            </div>
+                                            <div style={{position: 'relative', display: 'inline-block', width: '30px', height: '30px', lineHeight: '30px', fontSize: '20px', textAlign: 'center', border: '1px solid #ffffff', borderRadius: '5px', marginLeft: '50px'}}>
+                                                { productsRow.number_small3 }
+                                                <img src="/files-layout/frontend-icon-garage.png" alt="Garage" style={{position: 'absolute', display: 'block', bottom: '0px', left: '-45px'}} />
+                                            </div>
+                                        </div>
+
+                                        <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/" + gSystemConfig.configRouteFrontendDetails + "/" + productsRow.id } 
+                                            title={ SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "backendItemDetails") + " - " + SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.title, "db") }  
+                                            className="ss-frontend-products-details" style={{position: 'relative', display: 'block', margin: 'auto'}}>
+                                            { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "backendItemDetails") }
+                                        </a>
+
+                                        <div className="ss-frontend-products-listing-text03" style={{position: 'absolute', display: 'block', bottom: '10px', left: '50%', transform: 'translate(-50%, 0)'}}>
+                                            Sale
+                                        </div>
+                                    </article>
+                                </React.Fragment>
                             );
                         }) }
                     </React.Fragment>
