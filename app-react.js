@@ -51,7 +51,7 @@ const SyncSystemNS = require("./" + gSystemConfig.configDirectoryComponents + "/
 
 //Node modules.
 const express = require("express"); //Express Framework.
-const cors = require("cors"); //Allow api access from any location.
+//const cors = require("cors"); //Allow api access from any location.
 const favicon = require("express-favicon"); //Express Favicon.
 const path = require("path"); //Necessary to serve static files.
 const bodyParser = require("body-parser"); //Body parser module.
@@ -145,7 +145,7 @@ app.use(favicon(path.join(__dirname, "safari-pinned-tab.svg")));
 
 //Additional configuration / setup.
 //----------------------
-app.use(cors());
+//app.use(cors());
 
 app.use(express.json()); //handle raw json
 app.use(bodyParser.urlencoded({extended: false})); //Parse URL encoded forms.
