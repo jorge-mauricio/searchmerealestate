@@ -4,6 +4,7 @@
 //----------------------
 //Configuration file.
 //const gSystemConfig = require("../config-application.js"); //System configuration.
+
 //Create a namespace to help export all variables / properties.
 var gSystemConfig = {};
 
@@ -327,9 +328,11 @@ gSystemConfig.enableBackendMaintenancePublications = 0; //0 - disable | 1 - enab
 //const appLabels = require("./app_resources/language-en-us.js");
 
 //gSystemConfig.languageFrontend = appLabels; //working
-gSystemConfig.configLanguageFrontend = require("./" + gSystemConfig.configDirectoryResources + "/language-en-us.js");
+//gSystemConfig.configLanguageFrontend = require("./" + gSystemConfig.configDirectoryResources + "/language-en-us.js");
+gSystemConfig.configLanguageFrontend = require("../" + gSystemConfig.configDirectoryResources + "/language-en-us.js");
 //gSystemConfig.languageBackend = appLabels; //working
-gSystemConfig.configLanguageBackend = require("./" + gSystemConfig.configDirectoryResources + "/language-en-us.js");
+//gSystemConfig.configLanguageBackend = require("./" + gSystemConfig.configDirectoryResources + "/language-en-us.js");
+gSystemConfig.configLanguageBackend = require("../" + gSystemConfig.configDirectoryResources + "/language-en-us.js");
 //**************************************************************************************
 
 
