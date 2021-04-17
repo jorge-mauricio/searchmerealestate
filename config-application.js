@@ -1,7 +1,7 @@
 "use strict";
 //import "babel-polyfill"; //with babel, we can use the import syntax. //heroku - returns compile error
 //import React, {Component, createContext} from "react"; //error on deploy
-require('dotenv').config();
+//require('dotenv').config(); //react / heroku - didn´t solve the issue
 
 
 //Author information.
@@ -40,16 +40,20 @@ gSystemConfig.configDevSite = "http://www.jorgemauricio.com"; //http://www.progr
 gSystemConfig.configCopyrightYear = "2021";
 
 //gSystemConfig.configSystemURL = "http://localhost:3000"; //http://multiplatformv1.syncsystem.com.br
-gSystemConfig.configSystemURL = process.env.CONFIG_SYSTEM_URL; //http://multiplatformv1.syncsystem.com.br
+//gSystemConfig.configSystemURL = process.env.CONFIG_SYSTEM_URL; //http://multiplatformv1.syncsystem.com.br
+gSystemConfig.configSystemURL = "https://searchmerealestate-backend.herokuapp.com"; //http://multiplatformv1.syncsystem.com.br
 //gSystemConfig.configSystemURL = window.location.origin; //http://multiplatformv1.syncsystem.com.br
 //gSystemConfig.configSystemURLSSL = "http://localhost:3000"; //http://multiplatformv1.syncsystem.com.br
-gSystemConfig.configSystemURLSSL = process.env.CONFIG_SYSTEM_URL_SSL; //http://multiplatformv1.syncsystem.com.br
+//gSystemConfig.configSystemURLSSL = process.env.CONFIG_SYSTEM_URL_SSL; //http://multiplatformv1.syncsystem.com.br
+gSystemConfig.configSystemURLSSL = "https://searchmerealestate-backend.herokuapp.com"; //http://multiplatformv1.syncsystem.com.br
 //gSystemConfig.configSystemURLSSL = window.location.origin; //http://multiplatformv1.syncsystem.com.br
 
 //gSystemConfig.configAPIURL = process.env.CONFIG_API_URL; //gSystemConfig.configSystemURLSSL | process.env.CONFIG_API_URL;
-gSystemConfig.configAPIURL = process.env.REACT_APP_CONFIG_API_URL; //gSystemConfig.configSystemURLSSL | process.env.CONFIG_API_URL;
+//gSystemConfig.configAPIURL = process.env.REACT_APP_CONFIG_API_URL; //gSystemConfig.configSystemURLSSL | process.env.CONFIG_API_URL;
+gSystemConfig.configAPIURL = "https://searchmerealestate-backend.herokuapp.com"; //gSystemConfig.configSystemURLSSL | process.env.CONFIG_API_URL;
 
-gSystemConfig.configURLFrontendReact = process.env.CONFIG_URL_FRONTEND_REACT;
+//gSystemConfig.configURLFrontendReact = process.env.CONFIG_URL_FRONTEND_REACT;
+gSystemConfig.configURLFrontendReact = "https://searchmerealestate.herokuapp.com";
 
 /*
 window.location.hash: "#2"
