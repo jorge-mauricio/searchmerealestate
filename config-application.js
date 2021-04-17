@@ -1,6 +1,7 @@
 "use strict";
 //import "babel-polyfill"; //with babel, we can use the import syntax. //heroku - returns compile error
 //import React, {Component, createContext} from "react"; //error on deploy
+require('dotenv').config();
 
 
 //Author information.
