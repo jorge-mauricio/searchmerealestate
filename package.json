@@ -8,7 +8,7 @@
   },
   "description": "Search Me Real Estate",
   "private": true,
-  "main": "node app",
+  "main": "app.js",
   "scripts": {
     "start": "node app"
   },
