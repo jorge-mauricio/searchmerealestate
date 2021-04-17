@@ -1,5 +1,6 @@
 "use strict";
 //import "babel-polyfill"; //with babel, we can use the import syntax. //heroku - returns compile error
+import React, {Component, createContext} from "react";
 
 
 //Author information.

@@ -311,6 +311,7 @@ class FrontendHome extends Component
         //Variables.
         const { gSystemConfig, SyncSystemNS, FunctionsSyncSystem } = this.context; //Deconstruct variables (each variable is allocated to it´s correspondent name).
         console.log("gSystemConfig (inside home cb component)=", gSystemConfig);
+        console.log("this.context (inside home cb component)=", this.context);
 
         //Logic.
         //----------------------
