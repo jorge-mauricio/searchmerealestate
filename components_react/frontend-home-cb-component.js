@@ -216,7 +216,7 @@ class FrontendHome extends Component
     {
         //Variables.
         //const { gSystemConfig, elementMessage01, SyncSystemNS } = this.context;
-        //const { gSystemConfig, SyncSystemNS, FunctionsSyncSystem } = this.context;
+        const { gSystemConfig, SyncSystemNS, FunctionsSyncSystem } = this.context;
 
 
         //Logic.
@@ -299,6 +299,7 @@ class FrontendHome extends Component
         
 
         //console.log("this.props=", JSON.stringify(this.props));
+        
     }
     //**************************************************************************************
     
@@ -309,7 +310,7 @@ class FrontendHome extends Component
     {
         //Variables.
         const { gSystemConfig, SyncSystemNS, FunctionsSyncSystem } = this.context; //Deconstruct variables (each variable is allocated to it´s correspondent name).
-
+        console.log("gSystemConfig (inside home cb component)=", gSystemConfig);
 
         //Logic.
         //----------------------

@@ -201,7 +201,8 @@ class FrontendProducts extends Component
         //Variables.
         //----------------------
         const { gSystemConfig, SyncSystemNS, FunctionsSyncSystem } = this.context; //Deconstruct variables (each variable is allocated to it´s correspondent name).
-        
+        console.log("gSystemConfig (inside products cb component)=", gSystemConfig);
+
         var apiURLProductsListing = "";
         var apiProductsListingResponse;
         //----------------------
