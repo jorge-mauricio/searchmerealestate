@@ -8,9 +8,9 @@
   },
   "description": "Search Me Real Estate",
   "private": true,
-  "main": "node -r dotenv/config build/bundle.react.js",
+  "main": "node --mode production build/bundle.react.js",
   "scripts": {
-     "start": "node -r dotenv/config build/bundle.react.js",
+     "start": "node --mode production build/bundle.react.js",
      "build": "webpack --config webpack.react.js --progress && webpack --config webpack.react.client.js --progress",
      "build:start": "webpack --config webpack.react.js --progress && webpack --config webpack.react.client.js --progress && node -r dotenv/config build/bundle.js"
   },
