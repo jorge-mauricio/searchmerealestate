@@ -1711,5 +1711,6 @@ module.exports =  {
     }
  }*/
 
- export { gSystemConfig };
+ //export { gSystemConfig }; //error
+ module.exports = gSystemConfig;
 //**************************************************************************************
