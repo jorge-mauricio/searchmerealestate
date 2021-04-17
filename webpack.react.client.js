@@ -51,7 +51,7 @@ module.exports = {
         //path: path.resolve(__dirname, "build/public"), 
         path: path.resolve(__dirname, gSystemConfig.configDirectoryBuildReact + "/" + gSystemConfig.configDirectoryBuildReactClient), 
         //publicPath: "/build/public" //dist
-        publicPath: "/" + gSystemConfig.configDirectoryBuildReactSD + "/" + gSystemConfig.configDirectoryBuildReactClientSD //public folder
+        publicPath: "/" + gSystemConfig.configDirectoryBuildReactSD + "/" + gSystemConfig.configDirectoryBuildReactClientSD + "/" //public folder
     },
     //Prevent errors on webpack build.
     /*
@@ -269,7 +269,8 @@ module.exports = {
             //Fonts.
             {
                 
-                test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                //test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                test: /\.(svg|jpg|jpeg|png|gif|ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
                 use: {
                     loader: "file-loader"
                     /*loader: "file-loader",

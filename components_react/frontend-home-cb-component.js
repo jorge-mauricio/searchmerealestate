@@ -40,6 +40,7 @@ if (typeof window !== 'undefined') {
 //import FrontendCategoriesListingRecord from "./frontend-categories-listing-record-cb-component.js";
 //import FrontendBanners from "./frontend-banners-cb-component.js";
 import FrontendProducts from "./frontend-products-cb-component.js";
+import FrontendContent from "./frontend-content-cb-component.js";
 //----------------------
 
 
@@ -54,7 +55,7 @@ class FrontendHome extends Component
     constructor(props, context)
     {
         //Component options.
-        //configLayoutType: 1 - div layout (custom) | 11 - div layout (bootstrap)
+        //configLayoutType: 1 - div layout (custom) | 11 - div layout (bootstrap) | 111 - responsive
 
 
         super(props, context);
@@ -66,7 +67,7 @@ class FrontendHome extends Component
         //Properties.
         //----------------------
         this.objParametersQueryString = qs.parse(this.props.location.search);
-        this.configLayoutType = 1;
+        this.configLayoutType = 111;
         //this._idParentCategories = 0;
 
         //this._pagingNRecords = gSystemConfig.configCategoriesFrontendPaginationNRecords;
@@ -377,7 +378,6 @@ class FrontendHome extends Component
             
 
 
-
             //Check if this._idParentCategories is number. If not, search for the id based on the friendly name.
             
 
@@ -472,6 +472,7 @@ class FrontendHome extends Component
         //elementMessage01("titleCurrent", this.titleCurrent); //working
         //console.log("FunctionsSyncSystem=", FunctionsSyncSystem);
         FunctionsSyncSystem.elementMessage01("titleCurrent", this.titleCurrent);
+        FunctionsSyncSystem.elementMessage01("titleCurrentMobile", this.titleCurrent);
     }
     //**************************************************************************************
     
@@ -515,77 +516,479 @@ class FrontendHome extends Component
         return(
             <React.Fragment>
                 <React.Fragment>
-                    { /*div layout (custom). */}
+                    { /*div layout (responsive). */}
                     { this.configLayoutType == 1 ?
                         <React.Fragment>
-                            <section className="ss-frontend-layout-section-content01">
-                                home content
-
-                                <a className="ss-frontend-link01"
-                                    href={"/"} 
-                                    title={"Home"}>
-                                    Link - Home
-                                </a>
-                                <a className="ss-frontend-link01"
-                                    href={"/" + gSystemConfig.configRouteFrontendCategories + "/813/"} 
-                                    title={"Categories"}>
-                                    Link - Categories
-                                </a>
-                                <a className="ss-frontend-link01"
-                                    href={"/" + gSystemConfig.configRouteFrontendContent + "/849/"} 
-                                    title={"Content"}>
-                                    Link - Content
-                                </a>
-                                <a className="ss-frontend-link01"
-                                    href={"/" + gSystemConfig.configRouteFrontendContent + "/849/?idTbForms=904"} 
-                                    title={"Content"}>
-                                    Link - Content with form
-                                </a>
-                                <a className="ss-frontend-link01"
-                                    href={"/" + gSystemConfig.configRouteFrontendProducts + "/960/"} 
-                                    title={"Products"}>
-                                    Link - Products
-                                </a>
-                                <a className="ss-frontend-link01"
-                                    href={"/" + gSystemConfig.configRouteFrontendPublications + "/1369/"} 
-                                    title={"Publications"}>
-                                    Link - Publications
-                                </a>
+                            <section className="ss-frontend-layout-section-content01 ss-frontend-text01">
+                                { /*Content.*/ }
+                                <FrontendContent 
+                                    idParentContent={ "106" } 
+                                    idTbContent={ "" } 
+                                    contentType={ "" } 
+                                    configLayoutType={ 2 } 
+                                    configContentNRecords={ "" } 
+                                    configContentSort={ "" }>
+                                        {/*arrCategoriesListing={ this.arrCategoriesListing } also works*/}
+                                </FrontendContent>
                             </section>
                         </React.Fragment>
                     :``
                     }
 
+
                     { /*div layout (bootstrap). */}
                     { this.configLayoutType == 11 ?
                         <section className="container">
                             <div className="alert alert-success" role="alert" style={{textAlign: "center"}}>
+
                             </div>
 
                             bootstrap
                         </section>
                     :``
                     }
+
+
+                    { /*div layout (responsive). */}
+                    { this.configLayoutType == 111 ?
+                        <React.Fragment>
+                            { /*Desktop */}
+                            <div className="d-none d-lg-block d-xl-block">
+                                <section className="ss-frontend-layout-section-content01 ss-frontend-text01">
+                                    { /*Content.*/ }
+                                    <FrontendContent 
+                                        idParentContent={ "106" } 
+                                        idTbContent={ "" } 
+                                        contentType={ "" } 
+                                        configLayoutType={ 2 } 
+                                        configContentNRecords={ "" } 
+                                        configContentSort={ "" }>
+
+                                    </FrontendContent>
+                                </section>
+
+
+                                {/*Features.*/}
+                                <h2 className="ss-frontend-heading02" style={{position: 'relative', display: 'block', width: '100%', height: '180px', lineHeight: '150px', backgroundImage: 'url(/files-layout/frontend-heading-bg03.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center top', textAlign: 'center', margin: '0px', padding: '0px', overflow: 'hidden'}}>
+                                    Investment Opportunities
+                                </h2>
+                                <section className="ss-frontend-text01" style={{position: 'relative', display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', clear: 'both', margin: '0px 0px 60px 0px'}}>
+                                    {/*Box.*/}
+                                    <div style={{position: 'relative', display: 'block', width: '320px', height: '455px', backgroundImage: 'url(/files-layout/layout-desktop-features-bg01.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendContent + "/109/?idTbForms=117"} className="ss-frontend-features-link01" style={{"--ssFrontendFeaturesBG": 'url(/files-layout/frontend-icon-send.png)', "--ssFrontendFeaturesBGhover": 'url(/files-layout/frontend-icon-send-a.png)', backgroundPosition: 'center 20px'}}>
+                                            <span>
+                                                Send Us Your 
+                                                <br />
+                                                Project 
+                                            </span>
+                                        </a>
+                                        <p style={{position: 'relative', display: 'block', width: '190px', transform: 'translateX(5px)', margin: 'auto', top: '60px', textAlign: 'center'}}>
+                                            Check out our opportunities to buy, rent or invest in real estate in the main cities around the world.
+                                        </p>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendContent + "/109/?idTbForms=117"} className="ss-frontend-features-link02">
+                                            More Info
+                                        </a>
+                                    </div>
+
+                                    {/*Box.*/}
+                                    <div style={{position: 'relative', display: 'block', width: '320px', height: '455px', backgroundImage: 'url(/files-layout/layout-desktop-features-bg01.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/108/"} className="ss-frontend-features-link01" style={{"--ssFrontendFeaturesBG": 'url(/files-layout/frontend-icon-showcase.png)', "--ssFrontendFeaturesBGhover": 'url(/files-layout/frontend-icon-showcase-a.png)'}}>
+                                            <span>
+                                                Real Estate
+                                                <br />
+                                                Showcase
+                                            </span>
+                                        </a>
+                                        <p style={{position: 'relative', display: 'block', width: '190px', transform: 'translateX(5px)', margin: 'auto', top: '60px', textAlign: 'center'}}>
+                                            If you have an interesting venture or project, send it to us and we will be able to assess possible partnerships or buyers.
+                                        </p>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/108/"} className="ss-frontend-features-link02">
+                                            More Info
+                                        </a>
+                                    </div>
+
+                                    {/*Box.*/}
+                                    <div style={{position: 'relative', display: 'block', width: '320px', height: '455px', backgroundImage: 'url(/files-layout/layout-desktop-features-bg01.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
+                                        <a href="#" className="ss-frontend-features-link01" style={{"--ssFrontendFeaturesBG": 'url(/files-layout/frontend-icon-contact.png)', "--ssFrontendFeaturesBGhover": 'url(/files-layout/frontend-icon-contact-a.png)', backgroundPosition: 'center 20px'}}>
+                                            <span>
+                                            Contact
+                                            </span>
+                                        </a>
+                                        <p style={{position: 'relative', display: 'block', width: '190px', transform: 'translateX(5px)', margin: 'auto', top: '60px', textAlign: 'center'}}>
+                                            Get in touch with us to start a customized professional relationship and help you in your pursuit.
+                                        </p>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendContent + "/110/?idTbForms=115"} className="ss-frontend-features-link02">
+                                            More Info
+                                        </a>
+                                    </div>
+                                </section>
+
+
+                                {/*Cities.*/}
+                                <section className="ss-frontend-text02" style={{position: 'relative', display: 'block', width: '100vw', backgroundColor: '#0082c6', overflow: 'hidden', left: '50%', transform: 'translateX(-50%)'}}>
+                                    <div style={{position: 'relative', display: 'block', width: '50%', height: '465px', backgroundImage: 'url(/files-layout/layout-desktop-locations-ny.jpg)', backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom center', clear: 'both'}}>
+                                        <div style={{position: 'absolute', display: 'flex', alignItems: 'center', top: '0px', right: '-507px', width: '490px', height: '100%', textAlign: 'right'}}>
+                                            <div>
+                                                <div className="ss-frontend-heading03">
+                                                    New York - United States
+                                                </div>
+                                                <div style={{marginTop: '10px'}}>
+                                                    Real estate for rent, purchase or to invest
+                                                    <br />
+                                                    in the most powerful country.
+                                                </div>
+                                                <div style={{marginTop: '30px'}}>
+                                                    Give us a call:
+                                                    <br />
+                                                    +1 (646) 571-5415
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div style={{position: 'relative', display: 'block', width: '50%', height: '465px', backgroundImage: 'url(/files-layout/layout-desktop-locations-de.jpg)', backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom center', float: 'right', clear: 'both'}}>
+                                        <div style={{position: 'absolute', display: 'flex', alignItems: 'center', textAlign: 'left', top: '0px', left: '-507px', width: '490px', height: '100%'}}>
+                                            <div>
+                                                <div className="ss-frontend-heading03">
+                                                    Europe - Germany
+                                                </div>
+                                                <div style={{marginTop: '10px'}}>
+                                                    Real estate investments and opportunities
+                                                    <br />
+                                                    all over Europe.
+                                                </div>
+                                                <div style={{marginTop: '30px'}}>
+                                                    Give us a call:
+                                                    <br />
+                                                    +49 (0) 6430 92 60 10
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div style={{position: 'relative', display: 'block', width: '50%', height: '465px', backgroundImage: 'url(/files-layout/layout-desktop-locations-rj.jpg)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', clear: 'both'}}>
+                                        <div style={{position: 'absolute', display: 'flex', alignItems: 'center', textAlign: 'right', top: '0px', right: '-507px', width: '490px', height: '100%'}}>
+                                            <div>
+                                                <div className="ss-frontend-heading03">
+                                                    Rio de Janerio, 
+                                                    <br />
+                                                    São Paulo - Brazil
+                                                </div>
+                                                <div style={{marginTop: '10px'}}>
+                                                    Access to real estate in the most important touristic 
+                                                    <br />
+                                                    state in South America, along with great business 
+                                                    <br />
+                                                    investments in the biggest city.
+                                                </div>
+                                                <div style={{marginTop: '30px'}}>
+                                                    Give us a call:
+                                                    <br />
+                                                    São Paulo: +55 (11) 3230-8388
+                                                    <br />
+                                                    Rio de Janeiro: +55 (21) 3285-8388
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                                {/*Showcase.*/}
+                                <h2 className="ss-frontend-heading02" style={{position: 'relative', display: 'block', width: '100%', height: '180px', lineHeight: '150px', backgroundImage: 'url(/files-layout/frontend-heading-bg03.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center top', textAlign: 'center', margin: '0px', padding: '0px', overflow: 'hidden', zIndex: 1, pointerEvents: 'none'}}>
+                                    Showcase
+                                </h2>
+                                <section className="ss-frontend-layout-section-content01 ss-frontend-text01" style={{margin: '0px 0px 60px 0px', overflow: 'visible'}}>
+                                    <a href={"/" + gSystemConfig.configRouteFrontendContent + "/109/?idTbForms=117"} className="ss-frontend-link02" style={{position: 'absolute', display: 'block', left: '50%', transform: 'translate(-50%, 0)', top: '-50px'}}>
+                                        Access Our Full Listing
+                                    </a>
+
+                                    { /*Products component. */}
+                                    <FrontendProducts
+                                        idParentProducts={"108"} 
+                                        idRegisterUser={""} 
+
+                                        configLayoutType={2} 
+                                        configProductsNRecords={"3"} 
+                                        configProductsSort={gSystemConfig.configProductsSort} 
+
+                                        activation={1} 
+                                        activation1={""} 
+                                        activation2={""} 
+                                        activation3={""} 
+                                        activation4={""} 
+                                        activation5={""}>
+
+                                    </FrontendProducts>
+                                </section>
+
+
+                                {/*Indexes.*/}
+                                <h2 className="ss-frontend-heading02" style={{position: 'relative', display: 'block', width: '100%', height: '180px', lineHeight: '150px', backgroundImage: 'url(/files-layout/frontend-heading-bg03.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center top', textAlign: 'center', margin: '0px', padding: '0px', overflow: 'hidden'}}>
+                                    Indexes
+                                </h2>
+                                <section className="ss-frontend-layout-section-content01 ss-frontend-text01" style={{margin: '25px 0px 60px 0px'}}>
+                                    <div style={{position: 'relative', display: 'block', width: '940px', height: '480px', backgroundColor: '#f3f3f3', borderRadius: '20px', margin: 'auto'}}>
+                                        <a onclick className="ss-frontend-indexes-link01" style={{left: '12px', top: '30px'}}>
+                                            <span style={{position: 'relative', display: 'block', fontSize: '26px', marginLeft: '15px', marginTop: '22px'}}>
+                                                Exchange
+                                            </span>
+                                            <span style={{position: 'relative', display: 'block', fontSize: '14px', marginLeft: '15px', marginTop: '2px'}}>
+                                                Quick glimpse of the rates of the main currencies.
+                                            </span>
+                                        </a>
+
+                                        <a onclick className="ss-frontend-indexes-link01" style={{left: '12px', top: '122px'}}>
+                                            <span style={{position: 'relative', display: 'block', fontSize: '26px', marginLeft: '15px', marginTop: '22px'}}>
+                                                Markets
+                                            </span>
+                                            <span style={{position: 'relative', display: 'block', fontSize: '14px', marginLeft: '15px', marginTop: '2px'}}>
+                                                Check some of the most important indexes.
+                                            </span>
+                                        </a>
+
+                                        <div style={{position: 'absolute', display: 'block', width: '350px', height: '270px', left: '12px', top: '214px', backgroundImage: 'linear-gradient(#e0e1e3, #f3f3f3)'}}>
+                                        
+                                        </div>
+
+                                        <img src="/files-layout/frontend-desktop-indexes-element01.png" alt="Element" style={{position: 'absolute', display: 'block', left: '347px', top: '30px'}} />
+                                    
+                                        {/*Markets.*/}
+                                        <div id="divIndexesMarket" style={{position: 'absolute', display: 'block', width: '555px', height: '440px', left: '370px', top: '30px'}}>
+                                            <h4 className="ss-frontend-heading04" style={{position: 'relative', display: 'block', borderBottom: '1px solid #a2b9c6', textAlign: 'right', marginBottom: '10px'}}>
+                                                Markets
+                                            </h4>
+                                            <div className="ss-frontend-text03" style={{position: 'relative', display: 'block', width: '100%', height: '45px', lineHeight: '45px', textIndent: '10px', backgroundColor: '#ffffff'}}>
+                                                xyz
+                                                <span style={{float: 'right', paddingRight: '10px'}}>
+                                                    123
+                                                </span>
+                                            </div>
+                                            <div className="ss-frontend-text03" style={{position: 'relative', display: 'block', width: '100%', height: '45px', lineHeight: '45px', textIndent: '10px'}}>
+                                                xyz
+                                                <span style={{float: 'right', paddingRight: '10px'}}>
+                                                    123
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+
+
+                            { /*Mobile */}
+                            <div className="d-lg-none">
+                                <section class="ss-frontend-mobile-layout-section-content01 ss-frontend-text01">
+                                    { /*Content.*/ }
+                                    <FrontendContent 
+                                        idParentContent={ "106" } 
+                                        idTbContent={ "" } 
+                                        contentType={ "" } 
+                                        configLayoutType={ 2 } 
+                                        configContentNRecords={ "" } 
+                                        configContentSort={ "" }>
+
+                                    </FrontendContent>
+                                </section>
+
+                                {/*Features.*/}
+                                <h2 className="ss-frontend-heading02" style={{position: 'relative', display: 'block', width: '95%', height: '115px', lineHeight: '100px', backgroundImage: 'url(/files-layout/frontend-mobile-subheading-bg01-right.png), url(/files-layout/frontend-mobile-subheading-bg01-left.png), url(/files-layout/frontend-mobile-subheading-bg01.png)', backgroundRepeat: 'no-repeat, no-repeat, repeat-x', backgroundPosition: 'right top, left top, center top', textAlign: 'center', fontSize: '20px', margin: 'auto', padding: '0px', overflow: 'hidden'}}>
+                                    Investment Opportunities
+                                </h2>
+                                <section className="ss-frontend-text01" style={{position: 'relative', display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', clear: 'both', margin: '0px 0px 25px 0px'}}>
+                                    {/*Box.*/}
+                                    <div style={{position: 'relative', display: 'block', width: '320px', height: '455px', backgroundImage: 'url(/files-layout/layout-desktop-features-bg01.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/108/"} className="ss-frontend-features-link01" style={{"--ssFrontendFeaturesBG": 'url(/files-layout/frontend-icon-showcase.png)', "--ssFrontendFeaturesBGhover": 'url(/files-layout/frontend-icon-showcase-a.png)'}}>
+                                            <span>
+                                                Real Estate
+                                                <br />
+                                                Showcase
+                                            </span>
+                                        </a>
+                                        <p style={{position: 'relative', display: 'block', width: '190px', transform: 'translateX(5px)', margin: 'auto', top: '60px', textAlign: 'center'}}>
+                                            If you have an interesting venture or project, send it to us and we will be able to assess possible partnerships or buyers.
+                                        </p>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/108/"} className="ss-frontend-features-link02">
+                                            More Info
+                                        </a>
+                                    </div>
+
+                                    {/*Box.*/}
+                                    <div style={{position: 'relative', display: 'block', width: '320px', height: '455px', backgroundImage: 'url(/files-layout/layout-desktop-features-bg01.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendContent + "/109/?idTbForms=117"} className="ss-frontend-features-link01" style={{"--ssFrontendFeaturesBG": 'url(/files-layout/frontend-icon-send.png)', "--ssFrontendFeaturesBGhover": 'url(/files-layout/frontend-icon-send-a.png)', backgroundPosition: 'center 20px'}}>
+                                        <span>
+                                            Send Us Your 
+                                            <br />
+                                            Investment Project 
+                                        </span>
+                                        </a>
+                                        <p style={{position: 'relative', display: 'block', width: '190px', transform: 'translateX(5px)', margin: 'auto', top: '60px', textAlign: 'center'}}>
+                                            Check out our opportunities to buy, rent or invest in real estate in the main cities around the world.
+                                        </p>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendContent + "/109/?idTbForms=117"} className="ss-frontend-features-link02">
+                                            More Info
+                                        </a>
+                                    </div>
+
+                                    {/*Box.*/}
+                                    <div style={{position: 'relative', display: 'block', width: '320px', height: '455px', backgroundImage: 'url(/files-layout/layout-desktop-features-bg01.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendContent + "/110/?idTbForms=115"} className="ss-frontend-features-link01" style={{"--ssFrontendFeaturesBG": 'url(/files-layout/frontend-icon-contact.png)', "--ssFrontendFeaturesBGhover": 'url(/files-layout/frontend-icon-contact-a.png)', backgroundPosition: 'center 20px'}}>
+                                            <span>
+                                                Contact
+                                            </span>
+                                        </a>
+                                        <p style={{position: 'relative', display: 'block', width: '190px', transform: 'translateX(5px)', margin: 'auto', top: '60px', textAlign: 'center'}}>
+                                            Get in touch with us to start a customized professional relationship and help you in your pursuit.
+                                        </p>
+                                        <a href={"/" + gSystemConfig.configRouteFrontendContent + "/110/?idTbForms=115"} className="ss-frontend-features-link02">
+                                            More Info
+                                        </a>
+                                    </div>
+                                </section>
+
+
+                                {/*Cities.*/}
+                                <section className="ss-frontend-text02" style={{position: 'relative', display: 'block', width: '100%', backgroundColor: '#0082c6', overflow: 'hidden'}}>
+                                    <div style={{position: 'relative', display: 'block', width: '100%', height: '150px', backgroundImage: 'url(/files-layout/layout-desktop-locations-ny.jpg)', backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom center', backgroundSize: 'cover'}}>
+                                    
+                                    </div>
+
+                                    <div style={{position: 'relative', display: 'block', textAlign: 'center', width: '100%', fontSize: '14px', lineHeight: '18px', padding: '25px 0px'}}>
+                                        <div className="ss-frontend-heading03" style={{fontSize: '18px', lineHeight: '20px'}}>
+                                            New York - United States
+                                        </div>
+                                        <div style={{marginTop: '0px'}}>
+                                            Real estate for rent, purchase or to invest
+                                            <br />
+                                            in the most powerful country.
+                                        </div>
+                                        <div style={{marginTop: '20px'}}>
+                                            Give us a call:
+                                            <br />
+                                            +1 (646) 571-5415
+                                        </div>
+                                    </div>
+
+                                    <div style={{position: 'relative', display: 'block', width: '100%', height: '150px', backgroundImage: 'url(/files-layout/layout-desktop-locations-de.jpg)', backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom center', backgroundSize: 'cover'}}>
+                                    
+                                    </div>
+
+                                    <div style={{position: 'relative', display: 'block', textAlign: 'center', width: '100%', fontSize: '14px', lineHeight: '18px', padding: '25px 0px'}}>
+                                        <div className="ss-frontend-heading03" style={{fontSize: '18px', lineHeight: '20px'}}>
+                                            Europe - Germany
+                                        </div>
+                                        <div style={{marginTop: '0px'}}>
+                                            Real estate investments and opportunities
+                                            <br />
+                                            all over Europe.
+                                        </div>
+                                        <div style={{marginTop: '20px'}}>
+                                            Give us a call:
+                                            <br />
+                                            +49 (0) 6430 92 60 10
+                                        </div>
+                                    </div>
+
+                                    <div style={{position: 'relative', display: 'block', width: '100%', height: '150px', backgroundImage: 'url(/files-layout/layout-desktop-locations-rj.jpg)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: 'cover'}}>
+                                    
+                                    </div>
+
+                                    <div style={{position: 'relative', display: 'block', textAlign: 'center', width: '100%', fontSize: '14px', lineHeight: '18px', padding: '25px 0px'}}>
+                                        <div className="ss-frontend-heading03" style={{fontSize: '18px', lineHeight: '20px'}}>
+                                            Rio de Janerio, 
+                                            <br />
+                                            São Paulo - Brazil
+                                        </div>
+                                        <div style={{marginTop: '0px'}}>
+                                            Access to real estate in the most important  
+                                            <br />
+                                            touristic state in South America, along with 
+                                            <br />
+                                            great business investments in the biggest city.
+                                        </div>
+                                        <div style={{marginTop: '20px'}}>
+                                            Give us a call:
+                                            <br />
+                                            São Paulo: +55 (11) 3230-8388
+                                            <br />
+                                            Rio de Janeiro: +55 (21) 3285-8388
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                                <h2 className="ss-frontend-heading02" style={{position: 'relative', display: 'block', width: '95%', height: '115px', lineHeight: '100px', backgroundImage: 'url(/files-layout/frontend-mobile-subheading-bg01-right.png), url(/files-layout/frontend-mobile-subheading-bg01-left.png), url(/files-layout/frontend-mobile-subheading-bg01.png)', backgroundRepeat: 'no-repeat, no-repeat, repeat-x', backgroundPosition: 'right top, left top, center top', textAlign: 'center', fontSize: '20px', margin: 'auto', padding: '0px', overflow: 'hidden'}}>
+                                    Showcase
+                                </h2>
+                                <section style={{position: 'relative', display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', margin: '0px 0px 25px 0px', overflow: 'visible'}}>
+                                    { /*Products component. */}
+                                    <FrontendProducts
+                                        idParentProducts={"108"} 
+                                        idRegisterUser={""} 
+
+                                        configLayoutType={2} 
+                                        configProductsNRecords={"3"} 
+                                        configProductsSort={gSystemConfig.configProductsSort} 
+
+                                        activation={1} 
+                                        activation1={""} 
+                                        activation2={""} 
+                                        activation3={""} 
+                                        activation4={""} 
+                                        activation5={""}>
+
+                                    </FrontendProducts>
+                                </section>     
+
+                                
+                                <h2 className="ss-frontend-heading02" style={{position: 'relative', display: 'block', width: '95%', height: '115px', lineHeight: '100px', backgroundImage: 'url(/files-layout/frontend-mobile-subheading-bg01-right.png), url(/files-layout/frontend-mobile-subheading-bg01-left.png), url(/files-layout/frontend-mobile-subheading-bg01.png)', backgroundRepeat: 'no-repeat, no-repeat, repeat-x', backgroundPosition: 'right top, left top, center top', textAlign: 'center', fontSize: '20px', margin: 'auto', padding: '0px', overflow: 'hidden'}}>
+                                    Indexes
+                                </h2>
+                                <section className="ss-frontend-mobile-layout-section-content01 ss-frontend-text01" style={{margin: '0px 0px 25px 0px'}}>
+                                    <div style={{position: 'relative', display: 'block', width: '305px', height: '514px', backgroundColor: '#f3f3f3', borderRadius: '15px', margin: 'auto'}}>
+                                        <a onclick className="ss-frontend-indexes-link01" style={{position: 'relative', paddingTop: '1px', top: '10px', marginLeft: 'auto', marginRight: 'auto', width: '290px'}}>
+                                            <span style={{position: 'relative', display: 'block', fontSize: '26px', marginLeft: '15px', marginTop: '22px'}}>
+                                                Exchange
+                                            </span>
+                                            <span style={{position: 'relative', display: 'block', fontSize: '14px', marginLeft: '15px', marginTop: '2px'}}>
+                                                Quick glimpse of the rates of the main currencies.
+                                            </span>
+                                        </a>
+
+                                        <a onclick className="ss-frontend-indexes-link01" style={{position: 'relative', paddingTop: '5px', top: '25px', marginLeft: 'auto', marginRight: 'auto', width: '290px'}}>
+                                            <span style={{position: 'relative', display: 'block', fontSize: '26px', marginLeft: '15px', marginTop: '22px'}}>
+                                                Markets
+                                            </span>
+                                            <span style={{position: 'relative', display: 'block', fontSize: '14px', marginLeft: '15px', marginTop: '2px'}}>
+                                                Check some of the most important indexes.
+                                            </span>
+                                        </a>
+
+                                        <img src="/files-layout/frontend-mobile-indexes-element01.png" alt="Element" style={{position: 'absolute', display: 'block', left: '0px', top: '200px'}} />
+                                        
+                                        <h4 className="ss-frontend-heading04" style={{position: 'relative', display: 'block', borderBottom: '1px solid #a2b9c6', textAlign: 'right', marginBottom: '10px', marginTop: '50px', marginRight: '5px', marginLeft: '5px'}}>
+                                            Markets
+                                        </h4>
+                                        <div className="ss-frontend-text03" style={{position: 'relative', display: 'block', width: '97%', height: '45px', lineHeight: '45px', textIndent: '10px', backgroundColor: '#ffffff', marginRight: '5px', marginLeft: '5px'}}>
+                                            xyz
+                                            <span style={{float: 'right', paddingRight: '10px'}}>
+                                                123
+                                            </span>
+                                        </div>
+                                        <div className="ss-frontend-text03" style={{position: 'relative', display: 'block', width: '97%', height: '45px', lineHeight: '45px', textIndent: '10px', marginRight: '5px', marginLeft: '5px'}}>
+                                            xyz
+                                            <span style={{float: 'right', paddingRight: '10px'}}>
+                                                123
+                                            </span>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </React.Fragment>
+                    :``
+                    }
                 </React.Fragment>
-
-
-                { /*Products component. */}
-                <FrontendProducts
-                    idParentProducts={"960"} 
-                    idRegisterUser={""} 
-
-                    configLayoutType={2} 
-                    configProductsNRecords={"3"} 
-                    configProductsSort={gSystemConfig.configProductsSort} 
-
-                    activation={1} 
-                    activation1={""} 
-                    activation2={""} 
-                    activation3={""} 
-                    activation4={""} 
-                    activation5={""}>
-
-                </FrontendProducts>
 
             </React.Fragment>
 

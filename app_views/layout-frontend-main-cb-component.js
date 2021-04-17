@@ -437,33 +437,386 @@ class LayoutFrontendMain extends Component
 
                 <body className={/*StylesFrontend["ss-frontend-body01"]*/ "ss-frontend-body01"}>
                     <div id="root">
-                        { this.props.location.pathname == "/" ?
-                            <FrontendBanners
-                                idParentBanners={""} 
-                                idTbCategories={""} 
-                                configLayoutType={22} 
-                                configDisplay={"horizontal"} 
-                                configContentNRecords={""} 
-                                configContentSort={""}
-                                >
-
-                            </FrontendBanners>
-                        :
-                            ``
-                        }
+                        <noscript>Please Enable JavaScript</noscript>
 
 
-                        { /*Content place holder - current title*/ }
-                        <h1 id="titleCurrent" className="ss-frontend-title-text01">
-                            { this.state.titleCurrent }
-                            {/*this.props.cphTitle*/''}
-                        </h1>
-                        
+                        {/*Desktop layout.*/}
+                        <div className="d-none d-lg-block d-xl-block" style={{position: 'relative', display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+                            <header className="ss-frontend-fauntain01" style={{position: 'relative', display: 'block', height: '200px'}}>
+                                <div style={{position: 'relative', display: 'block', width: '100%', height: '100%', backgroundImage: 'url(/files-layout/frontend-desktop-header-bg01.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center 10px'}}>
+                                    <div style={{position: 'relative', display: 'block', width: '1015px', height: '100%', marginLeft: 'auto', marginRight: 'auto'}}>
+                                        <a href="/" style={{position: 'absolute', display: 'block', left: '14px', top: '25px'}} title="Home">
+                                            <img src="/files-layout/frontend-desktop-logo.png" alt="Logo" />
+                                        </a>
 
-                        { /*Content place holder - body*/ }
-                        <main>
-                            { this.props.cphBody }
-                        </main>
+                                        {/*WhatsApp.*/}
+                                        <a href="https://api.whatsapp.com/send?phone=16465715415" target="_blank" title="WhatsApp" className="ss-frontend-btn-contact">
+                                            <span>
+                                            CALL OR TEXT US!
+                                            </span>
+                                            +1 (646) 571-5415
+                                        </a>
+
+                                        {/*Links.*/}
+                                        <nav style={{position: 'absolute', display: 'block', left: '0px', right: '0px', top: '149px', textAlign: 'center'}}>
+                                            <a href="/" className="ss-frontend-link01 ss-frontend-link01-layout" title="Home">
+                                                Home
+                                            </a><a href={"/" + gSystemConfig.configRouteFrontendContent + "/107/"} className="ss-frontend-link01 ss-frontend-link01-layout" title="About Us ">
+                                                About Us 
+                                            </a><a href={"/" + gSystemConfig.configRouteFrontendProducts + "/108/"} className="ss-frontend-link01 ss-frontend-link01-layout" title="Real Estate Showcase">
+                                                Real Estate Showcase
+                                            </a><a href={"/" + gSystemConfig.configRouteFrontendContent + "/109/?idTbForms=117"} className="ss-frontend-link01 ss-frontend-link01-layout" title="Send Us Your Project">
+                                                Send Us Your Project
+                                            </a><a href={"/" + gSystemConfig.configRouteFrontendContent + "/111/"} className="ss-frontend-link01 ss-frontend-link01-layout" title="Partnerships">
+                                                Partnerships
+                                            </a><a href={"/" + gSystemConfig.configRouteFrontendContent + "/110/?idTbForms=115"} className="ss-frontend-link01 ss-frontend-link01-layout" title="Contact" style={{borderRight: 'none'}}>
+                                                Contact
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </header>
+
+                            {/*Banner*/}
+                            { this.props.location.pathname == "/" ?
+                                <div style={{position: 'relative', display: 'block', height: '525px', backgroundColor: '#999', overflow: 'hidden'}}>
+                                    <FrontendBanners
+                                        idParentBanners={""} 
+                                        idTbCategories={""} 
+                                        configLayoutType={22} 
+                                        configDisplay={"horizontal"} 
+                                        configContentNRecords={""} 
+                                        configContentSort={""}
+                                        >
+
+                                    </FrontendBanners>
+                                </div>
+                            :
+                                ``
+                            }
+                            {/*Banner*/}
+
+                            {/*Titles.*/}
+                            <h1 id="titleCurrent" className="ss-frontend-heading01" style={{position: 'relative', display: 'block', width: '100%', height: '175px', lineHeight: '210px', backgroundColor: '#a2b9c6', backgroundImage: 'url(/files-layout/frontend-heading-bg02.png), url(/files-layout/frontend-heading-bg01.jpg)', backgroundRepeat: 'no-repeat, repeat-x', backgroundPosition: 'center bottom, bottom', borderBottom: '20px solid #dbdbdb', textAlign: 'center', margin: '0px', padding: '0px', overflow: 'hidden'}}>
+                                <span style={{position: 'absolute', display: 'block', left: '0px', right: '0px', top: '14px', textAlign: 'center', fontSize: '13px', lineHeight: 'normal', marginLeft: 'auto', marginRight: 'auto'}}>
+                                    {/*search component.*/}
+                                </span>
+                                { /*Content place holder - current title*/ }
+                                { this.state.titleCurrent }
+                            </h1>
+
+                            {/*Content.*/}
+                            <main style={{position: 'relative', display: 'flex', flex: 1, alignItems: 'stretch', width: '1015px', marginLeft: 'auto', marginRight: 'auto'}}>
+                                <div style={{position: 'relative', display: 'block', minWidth: '100%', maxWidth: '100%',}}>
+                                    { /*Content place holder - body*/ }
+                                    { this.props.cphBody }
+                                </div>
+                            </main>  
+
+                            
+                            {/*Footer*/}
+                            <footer className="ss-frontend-footer-text01" style={{position: 'relative', display: 'block', height: '285px', backgroundImage: 'url(/files-layout/frontend-desktop-footer-bg01.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center -25px', zIndex: 1}}>
+                                <div style={{position: 'relative', display: 'block', width: '1015px', height: '100%', marginLeft: 'auto', marginRight: 'auto'}}>
+
+                                    {/*Site map*/}
+                                    <nav style={{position: 'absolute', display: 'block', top: '25px', left: '25px'}}>
+                                        <div className="ss-frontend-footer-heading01" style={{position: 'relative', display: 'block', marginBottom: '0px', fontSize: '24px'}}>
+                                            Site Map
+                                        </div>
+                                        <ul className="ss-frontend-links-ul02">
+                                            <li className="ss-frontend-links-li02">
+                                                <a href="/" className="ss-frontend-footer-links01" title="Home">
+                                                    Home
+                                                </a>
+                                            </li>
+                                            <li className="ss-frontend-links-li02">
+                                                <a href={"/" + gSystemConfig.configRouteFrontendContent + "/107/"} className="ss-frontend-footer-links01" title="About Us">
+                                                    About Us
+                                                </a>
+                                            </li>
+                                            <li className="ss-frontend-links-li02">
+                                                <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/108/"} className="ss-frontend-footer-links01" title="Real Estate Showcase">
+                                                    Real Estate Showcase
+                                                </a>
+                                            </li>
+                                            <li className="ss-frontend-links-li02">
+                                                <a href={"/" + gSystemConfig.configRouteFrontendContent + "/109/?idTbForms=117"} className="ss-frontend-footer-links01" title="Send Us Your Project">
+                                                    Send Us Your Project
+                                                </a>
+                                            </li>
+                                            <li className="ss-frontend-links-li02">
+                                                <a href={"/" + gSystemConfig.configRouteFrontendContent + "/111/"} className="ss-frontend-footer-links01" title="Partnerships">
+                                                    Partnerships
+                                                </a>
+                                            </li>
+                                            <li className="ss-frontend-links-li02">
+                                                <a href={"/" + gSystemConfig.configRouteFrontendContent + "/110/?idTbForms=115"} className="ss-frontend-footer-links01" title="Contact">
+                                                    Contact
+                                                </a>
+                                            </li>
+                                            <li className="ss-frontend-links-li02">
+                                                <a href={"/" + gSystemConfig.configRouteFrontendContent + "/112/"} className="ss-frontend-footer-links01" title="Privacy and Cookie Policy">
+                                                    Privacy and Cookie Policy
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    {/*Contact.*/}
+                                    <address style={{position: 'absolute', display: 'block', left: '0px', right: '0px', top: '25px', textAlign: 'center', marginLeft: 'auto', marginRight: 'auto'}}>
+                                        <div className="ss-frontend-footer-heading01" style={{position: 'relative', display: 'block', marginBottom: '0px', fontSize: '24px'}}>
+                                            Contact Options
+                                        </div>
+                                        <div style={{position: 'relative', display: 'block', marginBottom: '4px'}}>
+                                            <strong style={{display: 'block'}}>
+                                                New York - United States
+                                            </strong>
+                                            +1 (646) 571-5415
+                                        </div>
+                                        <div style={{position: 'relative', display: 'block', marginBottom: '4px'}}>
+                                            <strong style={{display: 'block'}}>
+                                                Germany - Europe
+                                            </strong>
+                                            +49 (0) 6430 92 60 10
+                                        </div>
+                                        <div>
+                                            <strong style={{display: 'block'}}>
+                                                São Paulo / Rio de Janeiro - Brazil 
+                                            </strong>
+                                            SP: +55 (11) 3230-8388
+                                            <br />
+                                            RJ: +55 (21) 3285-8388
+                                        </div>
+                                    </address>
+
+                                    {/*Direct contact.*/}
+                                    <div style={{position: 'absolute', display: 'block', top: '25px', right: '25px', textAlign: 'right'}}>
+                                        <div className="ss-frontend-footer-heading01" style={{position: 'relative', display: 'block', marginBottom: '0px', fontSize: '24px'}}>
+                                            Direct Call / Text
+                                        </div>
+                                        <div style={{fontSize: '28px'}}>
+                                            +1 (646) 571-5415
+                                        </div>
+                                        <a href="mailto:info@searchmerealestate.com" className="ss-frontend-footer-links01" style={{position: 'relative', display: 'block', fontSize: '17px', marginTop: '-4px'}}>
+                                            info@searchmerealestate.com
+                                        </a>
+
+                                        <img src="/files-layout/frontend-desktop-footer-logo.png" alt="Logo" style={{position: 'relative', display: 'inline-block', marginTop: '0px'}} />
+                                    </div>
+
+                                    {/*Credits.*/}
+                                    <small className="ss-frontend-copyright" style={{position: 'absolute', display: 'block', bottom: '35px', left: '25px', right: '25px', height: '40px', lineHeight: '40px', borderTop: '1px dashed #a2b9c6'}}>
+                                        { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "layoutCopyright") } © 
+                                        { gSystemConfig.configCopyrightYear } 
+                                        { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "configSiteTile") }.
+                                        { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "layoutCopyright1") }
+
+                                        {/*Development.*/}
+                                        <a href={gSystemConfig.configDevSite} target="_blank" className="ss-frontend-credit" style={{float: 'right'}}>
+                                            { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "layoutDevelopment") }: 
+                                            { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "layoutDevName") }
+                                        </a>
+                                    </small>
+                                </div>
+                            </footer>
+                            <div className="ss-frontend-fauntain01" style={{position: 'absolute', display: 'block', bottom: '100px', left: '0px', right: '0px', height: '65px'}}>
+
+                            </div>
+                        </div>
+
+
+
+                        {/*Mobile layout.*/}
+                        <div className="d-lg-none" style={{position: 'relative', minHeight: '100%'}}>
+                            <header style={{position: 'relative', display: 'block', height: '45px', background: '#0082c6'}}>
+                                {/*Menu mobile.*/}
+                                <nav id="divMenuMobile01" style={{position: 'fixed', display: 'none', width: '200px', height: '100%', right: '0px', top: '0px', backgroundColor: '#0082c6', overflow: 'hidden', zIndex: 9999, boxShadow: '3px 3px 10px #000000'}}>
+                                    <a onClick={()=>{
+                                            FunctionsSyncSystem.htmlGenericStyle01('divMenuMobile01', 'display', 'none');
+                                        }} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" style={{cursor: 'pointer'}} title="Close">
+                                        X Close
+                                    </a>
+                                    <a href="/" className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="Home">
+                                        Home
+                                    </a>
+                                    <a href={"/" + gSystemConfig.configRouteFrontendContent + "/107/"} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="About Us">
+                                        About Us
+                                    </a>
+                                    <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/108/"} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="Real Estate Showcase">
+                                        Real Estate Showcase
+                                    </a>
+                                    <a href={"/" + gSystemConfig.configRouteFrontendContent + "/109/?idTbForms=117"} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="Send Us Your Project">
+                                        Send Us Your Project
+                                    </a>
+                                    <a href={"/" + gSystemConfig.configRouteFrontendContent + "/111/"} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="Partnerships">
+                                        Partnerships
+                                    </a>
+                                    <a href={"/" + gSystemConfig.configRouteFrontendContent + "/110/?idTbForms=115"} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="Contact">
+                                        Contact
+                                    </a>
+                                    <a href={"/" + gSystemConfig.configRouteFrontendContent + "/112/"} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="Privacy and Cookie Policy">
+                                        Privacy and Cookie Policy
+                                    </a>
+                                </nav>
+
+                                <a onClick={()=>{
+                                        FunctionsSyncSystem.htmlGenericStyle01('divMenuMobile01', 'display', 'block');
+                                    }} style={{position: 'relative', display: 'block', padding: '5px', cursor: 'pointer'}} title="Menu">
+                                    <img src="/files-layout/frontend-mobile-menu01.png" alt="Menu" />
+                                </a>
+
+                                {/*WhatsApp.*/}
+                                <a href="https://api.whatsapp.com/send?phone=16465715415" target="_blank" title="WhatsApp" className="ss-frontend-mobile-btn-contact">
+                                    <span>
+                                        CALL OR TEXT US!
+                                    </span>
+                                    +1 (646) 571-5415
+                                </a>
+                            </header>
+                            <a href="/" title="Home" style={{position: 'relative', display: 'block', width: '100%', height: '125px', backgroundImage: 'url(/files-layout/frontend-mobile-logo.png), linear-gradient(#fafafa, #eeeeec)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
+                            
+                            </a> 
+
+                            {/*Banner.*/}
+                            <div style={{position: 'relative', display: 'block', height: '275px'/*, backgroundColor: '#cccccc'*/}}>
+                                <FrontendBanners
+                                    idParentBanners={""} 
+                                    idTbCategories={""} 
+                                    configLayoutType={22} 
+                                    configDisplay={"horizontal-mobile"} 
+                                    configContentNRecords={""} 
+                                    configContentSort={""}
+                                    >
+
+                                </FrontendBanners>
+                            </div>
+                            {/*Banner.*/}
+
+                            
+                            {/*Content.*/}
+                            <main style={{position: 'relative', display: 'block', padding: '0px', paddingBottom: '665px'}}>
+                                {/*Titles.*/}
+                                <h1 id="titleCurrentMobile" className="ss-frontend-heading01" style={{position: 'relative', display: 'block', width: '100%', height: '132px', lineHeight: '180px', backgroundColor: '#a2b9c6', backgroundImage: 'url(/files-layout/frontend-mobile-heading-bg01-left.jpg), url(/files-layout/frontend-mobile-heading-bg01-right.jpg), url(/files-layout/frontend-mobile-heading-bg01.jpg)', backgroundRepeat: 'no-repeat, no-repeat, repeat-x', backgroundPosition: 'left top, right top, center center', textAlign: 'center', fontSize: '26px', margin: '0px', padding: '0px', overflow: 'hidden'}}>
+                                    <span style={{position: 'absolute', display: 'block', left: '0px', right: '0px', top: '10px', textAlign: 'center', fontSize: '10px', lineHeight: 'normal', marginLeft: 'auto', marginRight: 'auto'}}>
+                                        {/*search component.*/}
+                                    </span>
+
+                                    { /*Content place holder - current title*/ }
+                                    { this.state.titleCurrent }
+                                </h1>
+
+                                { /*Content place holder - body*/ }
+                                { this.props.cphBody }
+                            </main>
+
+
+                            <footer className style={{position: 'absolute', width: '100%', bottom: '0px', left: '0px', height: '665px', backgroundImage: 'linear-gradient(to left, #f2f2f2, #f9f9f9, #f9f9f9, #f2f2f2)'}}>
+                                <div className="ss-frontend-fauntain01" style={{position: 'relative', display: 'block', width: '100%', height: '20px'}}>
+                                
+                                </div>
+
+                                {/*Direct contact.*/}
+                                <div style={{position: 'relative', display: 'block', textAlign: 'center', marginTop: '15px'}}>
+                                    <div className="ss-frontend-footer-heading01" style={{position: 'relative', display: 'block', marginBottom: '0px', fontSize: '20px'}}>
+                                        Direct Call / Text
+                                    </div>
+                                    <div style={{fontSize: '28px'}}>
+                                        +1 (646) 571-5415
+                                    </div>
+                                    <a href="mailto:info@searchmerealestate.com" className="ss-frontend-footer-links01" style={{position: 'relative', display: 'block', fontSize: '17px', marginTop: '-4px'}}>
+                                        info@searchmerealestate.com
+                                    </a>
+                                </div>
+
+                                {/*Contact.*/}
+                                <address style={{position: 'relative', display: 'block', textAlign: 'center', marginTop: '15px'}}>
+                                    <div className="ss-frontend-footer-heading01" style={{position: 'relative', display: 'block', marginBottom: '0px', fontSize: '20px'}}>
+                                        Contact Options
+                                    </div>
+                                    <div style={{position: 'relative', display: 'block', marginBottom: '4px'}}>
+                                    <strong style={{display: 'block'}}>
+                                        New York - United States
+                                    </strong>
+                                        +1 (646) 571-5415
+                                    </div>
+                                    <div style={{position: 'relative', display: 'block', marginBottom: '4px'}}>
+                                    <strong style={{display: 'block'}}>
+                                        Germany - Europe
+                                    </strong>
+                                        +49 (0) 6430 92 60 10
+                                    </div>
+                                    <div>
+                                        <strong style={{display: 'block'}}>
+                                            São Paulo / Rio de Janeiro - Brazil 
+                                        </strong>
+                                        SP: +55 (11) 3230-8388
+                                        <br />
+                                        RJ: +55 (21) 3285-8388
+                                    </div>
+                                </address>
+
+                                {/*Site map*/}
+                                <nav style={{position: 'relative', display: 'block', textAlign: 'center', marginTop: '15px'}}>
+                                    <div className="ss-frontend-footer-heading01" style={{position: 'relative', display: 'block', marginBottom: '0px', fontSize: '20px'}}>
+                                        Site Map
+                                    </div>
+                                    <ul className="ss-frontend-links-ul02" style={{textAlign: 'center', left: '12px'}}>
+                                        <li className="ss-frontend-links-li02">
+                                            <a href="/" className="ss-frontend-footer-links01" title="Home">
+                                                Home
+                                            </a>
+                                        </li>
+                                        <li className="ss-frontend-links-li02">
+                                            <a href={"/" + gSystemConfig.configRouteFrontendContent + "/107/"} className="ss-frontend-footer-links01" title="About Us">
+                                                About Us
+                                            </a>
+                                        </li>
+                                        <li className="ss-frontend-links-li02">
+                                            <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/108/"} className="ss-frontend-footer-links01" title="Real Estate Showcase">
+                                                Real Estate Showcase
+                                            </a>
+                                        </li>
+                                        <li className="ss-frontend-links-li02">
+                                            <a href={"/" + gSystemConfig.configRouteFrontendContent + "/109/?idTbForms=117"} className="ss-frontend-footer-links01" title="Send Us Your Project">
+                                                Send Us Your Project
+                                            </a>
+                                        </li>
+                                        <li className="ss-frontend-links-li02">
+                                            <a href={"/" + gSystemConfig.configRouteFrontendContent + "/111/"} className="ss-frontend-footer-links01" title="Partnerships">
+                                                Partnerships
+                                            </a>
+                                        </li>
+                                        <li className="ss-frontend-links-li02">
+                                            <a href={"/" + gSystemConfig.configRouteFrontendContent + "/110/?idTbForms=115"} className="ss-frontend-footer-links01" title="Contact">
+                                                Contact
+                                            </a>
+                                        </li>
+                                        <li className="ss-frontend-links-li02">
+                                            <a href={"/" + gSystemConfig.configRouteFrontendContent + "/112/"} className="ss-frontend-footer-links01" title="Privacy and Cookie Policy">
+                                                Privacy and Cookie Policy
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                                <img src="/files-layout/frontend-desktop-footer-logo.png" alt="Logo" style={{position: 'absolute', display: 'block', bottom: '60px', left: '50%', transform: 'translate(-60%, 0)'}} />
+                                
+                                {/*Credits*/}
+                                <small className="ss-frontend-copyright" style={{position: 'absolute', display: 'block', bottom: '0px', left: '5px', right: '5px', height: '30px', lineHeight: '30px', textAlign: 'center', borderTop: '1px dashed #a2b9c6'}}>
+                                    <div style={{position: 'absolute', display: 'block', left: '50%', transform: 'translate(-50%, 0)', top: '-30px', fontSize: '8px'}}>
+                                        { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "layoutCopyright") } © 
+                                        { gSystemConfig.configCopyrightYear } 
+                                        { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "configSiteTile") }.
+                                        { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "layoutCopyright1") }
+                                    </div>
+                                    <a href={gSystemConfig.configDevSite} target="_blank" className="ss-frontend-credit" style={{fontSize: '8px'}}>
+                                        { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "layoutDevelopment") }: 
+                                        { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "layoutDevName") }
+                                    </a>
+                                </small>
+                            </footer>
+                        </div>
+
                     </div>
 
 

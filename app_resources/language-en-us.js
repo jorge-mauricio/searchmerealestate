@@ -986,7 +986,7 @@ exports.appLabels = {
     //**************************************************************************************
     frontendMessageRecordEmpty: "No records found at the moment.",
     frontendMessageCategoriesEmpty: "No categories found at the moment.",
-    frontendMessageProductsEmpty: "No products found at the moment.",
+    frontendMessageProductsEmpty: "No records found at the moment.",
     frontendMessagePublicationsEmpty: "No publications found at the moment.",
     //**************************************************************************************
 

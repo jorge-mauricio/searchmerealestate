@@ -2,7 +2,7 @@
 
 //Import Node Modules.
 //----------------------
-import 'babel-polyfill';
+import 'babel-polyfill'; //with babel, we can use the import syntax. //confirmed that is necessary
 
 //JQuery.
 //import $ from 'jquery';
