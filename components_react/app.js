@@ -47,6 +47,8 @@ import FrontendPublicationsDetails from "./frontend-publications-details-cb-comp
 
 
 class App extends React.Component {
+
+    
     //Constructor.
     //**************************************************************************************
     constructor(props, context)
