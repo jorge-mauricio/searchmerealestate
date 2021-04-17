@@ -4,6 +4,7 @@
 //----------------------
 //Configuration file.
 const gSystemConfig = require("../config-application.js"); //System configuration.
+//import gSystemConfig from = "../config-application.js"; //System configuration.
 
 //Node functions.
 const FunctionsGeneric = require("../" + gSystemConfig.configDirectoryComponents + "/functions-generic.js");

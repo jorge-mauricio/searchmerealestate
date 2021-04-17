@@ -38,6 +38,7 @@ fs.readdirSync('node_modules')
 module.exports = {
     mode: "production", //production is default | development
     target: "node",
+    context: path.resolve(__dirname, gSystemConfig.configDirectoryBuildReact),
     //entry: "./app.js",
     entry: "./app-react.js",
     //entry: "./app-react-node.js",

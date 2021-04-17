@@ -33,6 +33,7 @@ module.exports = {
     mode: "production", //production is default | development
     //target: "node",//causing error: require not defined
     //target: "web",
+    context: path.resolve(__dirname, gSystemConfig.configDirectoryBuildReact + "/" + gSystemConfig.configDirectoryBuildReactClient),
     entry: "./components_react/client.js",
     //externals: nodeModules,
     //externals: [webpackNodeExternals()],
