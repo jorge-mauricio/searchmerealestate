@@ -46,7 +46,7 @@ module.exports = {
         //globalObject: "this", //ref: https://stackoverflow.com/questions/38951721/react-js-server-side-issue-window-not-found
         libraryTarget: "commonjs2", //ref: https://stackoverflow.com/questions/52807408/webpack-referenceerror-require-is-not-defined-reactjs
         //library: "FunctionsSyncSystem",
-        library: gSystemConfig,
+        //library: gSystemConfig,
         //libraryTarget: "window",
         //libraryExport: "default",
         //filename: "bundle.js",
