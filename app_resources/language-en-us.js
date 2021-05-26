@@ -570,7 +570,7 @@ exports.appLabels = {
     backendProductsInfoS6: "View",
     backendProductsInfoS7: "Conditions",
     backendProductsInfoS8: "Online Map",
-    backendProductsInfoS9: "Information Small 9",
+    backendProductsInfoS9: "Information Small 09",
     backendProductsInfoS10: "Information Small 10",
     backendProductsInfoS11: "Information Small 11",
     backendProductsInfoS12: "Information Small 12",

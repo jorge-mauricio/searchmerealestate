@@ -1021,7 +1021,7 @@ gSystemConfig.enableProductsInfoS8 = 2; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfoS8FieldType = 1; //1 - single line | 2 - multiline
 
 gSystemConfig.enableProductsInfoS9 = 0; //0 - disable | 1 - enable
-gSystemConfig.configProductsInfoS9FieldType = 1; //1 - single line | 2 - multiline
+gSystemConfig.configProductsInfoS9FieldType = 2; //1 - single line | 2 - multiline
 
 gSystemConfig.enableProductsInfoS10 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfoS10FieldType = 1; //1 - single line | 2 - multiline
