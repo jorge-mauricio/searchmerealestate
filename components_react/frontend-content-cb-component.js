@@ -222,7 +222,8 @@ class FrontendContent extends Component
             //API - build URL string.
             //apiURLContentListing = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIContent + "/" + this.idParentContent + "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
             apiURLContentListing = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIContent + "/" + this.idParentContent;
-            apiURLContentListing += "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(gSystemConfig.configAPIKeySystem, "env"), 2); 
+            //apiURLContentListing += "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(gSystemConfig.configAPIKeySystem, "env"), 2); 
+            apiURLContentListing += "/?apiKey=createSecretPassword"; 
             if(this.contentType != "")
             {
                 apiURLContentListing += "&contentType=" + this.contentType; 

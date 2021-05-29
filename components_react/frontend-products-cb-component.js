@@ -239,7 +239,8 @@ class FrontendProducts extends Component
             {
                 apiURLProductsListing += "&activation5=" + this.activation5;
             }
-            apiURLProductsListing += "&apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
+            //apiURLProductsListing += "&apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
+            apiURLProductsListing += "&apiKey=createSecretPassword";
 
             //API - fetch data from backend.
             apiProductsListingResponse = await fetch(apiURLProductsListing);

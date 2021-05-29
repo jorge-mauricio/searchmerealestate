@@ -174,7 +174,8 @@ class FrontendProductsDetails extends Component
         try
         {
             //API - build URL string.
-            apiURLProductsDetails = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIProducts + "/" + gSystemConfig.configRouteAPIDetails + "/" + this._idTbProducts + "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
+            //apiURLProductsDetails = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIProducts + "/" + gSystemConfig.configRouteAPIDetails + "/" + this._idTbProducts + "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
+            apiURLProductsDetails = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIProducts + "/" + gSystemConfig.configRouteAPIDetails + "/" + this._idTbProducts + "/?apiKey=createSecretPassword";
         
             //API - fetch data from backend.
             apiProductsDetailsResponse = await fetch(apiURLProductsDetails);
