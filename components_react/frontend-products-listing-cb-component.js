@@ -298,8 +298,11 @@ class FrontendProductsListing extends Component
         try
         {
             //API - build URL string.
-            apiURLCategoriesDetailsCurrent = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPICategories + "/" + this._idParentProducts + "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
-            apiURLProductsListing = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIProducts + "/" + this._idParentProducts + "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
+            //apiURLCategoriesDetailsCurrent = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPICategories + "/" + this._idParentProducts + "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
+            apiURLCategoriesDetailsCurrent = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPICategories + "/" + this._idParentProducts + "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(gSystemConfig.configAPIKeySystem, "env"), 2);
+            //apiURLProductsListing = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIProducts + "/" + this._idParentProducts + "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
+            apiURLProductsListing = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIProducts + "/" + this._idParentProducts + "/?activation=1";
+            apiURLProductsListing += "&apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(gSystemConfig.configAPIKeySystem, "env"), 2);
             //console.log("apiURLCategoriesDetailsCurrent=", apiURLCategoriesDetailsCurrent);
 
             //API - fetch data from backend.
@@ -501,22 +504,21 @@ class FrontendProductsListing extends Component
         //Output.
         return(
             <React.Fragment>
-                <section className="ss-frontend-layout-section-content01">
+                <section className="ss-frontend-layout-section-content01" style={{margin: '25px 0px 60px 0px'}}>
                     { /*Content.*/ }
-                    <div style={{marginBottom: "30px"}}>
-                        <FrontendContent 
-                            idParentContent={ "147" } 
-                            idTbContent={ "" } 
-                            contentType={ "" } 
-                            configLayoutType={ 2 } 
-                            configContentNRecords={ "" } 
-                            configContentSort={ "" }>
-                                {/*arrCategoriesListing={ this.arrCategoriesListing } also works*/}
-                        </FrontendContent>
+                    <div style={{margin: '25px 25px'}}>
+                    <FrontendContent 
+                        idParentContent={ "147" } 
+                        idTbContent={ "" } 
+                        contentType={ "" } 
+                        configLayoutType={ 2 } 
+                        configContentNRecords={ "" } 
+                        configContentSort={ "" }>
+                            {/*arrCategoriesListing={ this.arrCategoriesListing } also works*/}
+                    </FrontendContent>
                     </div>
 
-
-                    <div className="d-none d-lg-block ss-frontend-layout-section-content01">
+                    <div className="d-none d-lg-block">
                         { /*Products records.*/ }
                         <FrontendProductsListingRecord 
                             arrProductsListing={ this.state.arrProductsListing } 
@@ -539,7 +541,7 @@ class FrontendProductsListing extends Component
                         <React.Fragment>
                             { /*pagination (custom).*/ }
                             { gSystemConfig.enableProductsFrontendPagination == 1 ?
-                                <div style={{position: "relative", display: "block", overflow: "hidden", textAlign: "center", margin: "20px 0px 0px 0px" }}>
+                                <div style={{position: "relative", display: "none", overflow: "hidden", textAlign: "center", margin: "20px 0px 0px 0px" }}>
                                     <div style={{position: "relative", display: "block", overflow: "hidden"}}>
                                         { /*First page.*/ }
                                         { this._pageNumber == 1 ? 

@@ -26,10 +26,19 @@ router.get("/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteA
 
     let oplRecords;
     let oplRecordsParameters;
+    let arrSearchParameters = [];
     let objSpecialParameters;
 
     //let cdBackend;
     let idParentProducts = "";
+
+    let activation;
+    let activation1;
+    let activation2;
+    let activation3;
+    let activation4;
+    let activation5;
+
     let pageNumber = "";
     let pagingNRecords = "";
     let strNRecords = "";
@@ -50,6 +59,31 @@ router.get("/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteA
     if(req.params.idParentProducts)
     {
         idParentProducts = req.params.idParentProducts;
+    }
+
+    if(req.query.activation)
+    {
+        activation = req.query.activation;
+    }
+    if(req.query.activation1)
+    {
+        activation1 = req.query.activation1;
+    }
+    if(req.query.activation2)
+    {
+        activation2 = req.query.activation2;
+    }
+    if(req.query.activation3)
+    {
+        activation3 = req.query.activation3;
+    }
+    if(req.query.activation4)
+    {
+        activation4 = req.query.activation4;
+    }
+    if(req.query.activation5)
+    {
+        activation5 = req.query.activation5;
     }
 
     if(req.query.pageNumber)
@@ -117,6 +151,34 @@ router.get("/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteA
 
 
                     //Parameters build.
+                    arrSearchParameters.push("id_parent;" + idParentProducts + ";s");
+                    if(activation)
+                    {
+                        arrSearchParameters.push("activation;" + activation + ";i");
+                    }/*else{
+                        arrSearchParameters.push("activation;1;i");
+                    }*/
+                    if(activation1)
+                    {
+                        arrSearchParameters.push("activation1;" + activation1 + ";i");
+                    }
+                    if(activation2)
+                    {
+                        arrSearchParameters.push("activation2;" + activation2 + ";i");
+                    }
+                    if(activation3)
+                    {
+                        arrSearchParameters.push("activation3;" + activation3 + ";i");
+                    }
+                    if(activation4)
+                    {
+                        arrSearchParameters.push("activation4;" + activation4 + ";i");
+                    }
+                    if(activation5)
+                    {
+                        arrSearchParameters.push("activation5;" + activation5 + ";i");
+                    }
+
                     objSpecialParameters = {returnType: 3};
                     if(pageNumber != "")
                     {
@@ -126,10 +188,11 @@ router.get("/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteA
                     {
                         objSpecialParameters.pagingNRecords = pagingNRecords;
                     }
-
+                    
                     //Parameters build - listing.
                     oplRecordsParameters = {
-                        _arrSearchParameters: ["id_parent;" + idParentProducts + ";i"],
+                        //_arrSearchParameters: ["id_parent;" + idParentProducts + ";i"],
+                        _arrSearchParameters: arrSearchParameters,
                         _configSortOrder: gSystemConfig.configProductsSort,
                         _strNRecords: "",
                         _objSpecialParameters: objSpecialParameters

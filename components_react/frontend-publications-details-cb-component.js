@@ -174,8 +174,9 @@ class FrontendPublicationsDetails extends Component
         try
         {
             //API - build URL string.
-            apiURLPublicationsDetails = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIPublications + "/" + gSystemConfig.configRouteAPIDetails + "/" + this._idTbPublications + "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
-        
+            //apiURLPublicationsDetails = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIPublications + "/" + gSystemConfig.configRouteAPIDetails + "/" + this._idTbPublications + "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
+            apiURLPublicationsDetails = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIPublications + "/" + gSystemConfig.configRouteAPIDetails + "/" + this._idTbPublications + "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(gSystemConfig.configAPIKeySystem, "env"), 2);
+
             //API - fetch data from backend.
             apiPublicationsDetailsResponse = await fetch(apiURLPublicationsDetails);
             this.objPublicationsDetailsJson = await apiPublicationsDetailsResponse.json();

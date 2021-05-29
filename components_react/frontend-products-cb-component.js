@@ -213,8 +213,33 @@ class FrontendProducts extends Component
         {
             //API - build URL string.
             //apiURLProductsListing = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIProducts + "/" + this.idParentProducts + "/?apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
-            apiURLProductsListing = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIProducts + "/" + this.idParentProducts + "/?strNRecords=" + this.configProductsNRecords + "&apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
-            //TODO: Develop
+            //apiURLProductsListing = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIProducts + "/" + this.idParentProducts + "/?strNRecords=" + this.configProductsNRecords + "&apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
+            apiURLProductsListing = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIProducts + "/" + this.idParentProducts + "/?strNRecords=" + this.configProductsNRecords;
+            if(this.activation)
+            {
+                apiURLProductsListing += "&activation=" + this.activation;
+            }
+            if(this.activation1)
+            {
+                apiURLProductsListing += "&activation1=" + this.activation1;
+            }
+            if(this.activation2)
+            {
+                apiURLProductsListing += "&activation2=" + this.activation2;
+            }
+            if(this.activation3)
+            {
+                apiURLProductsListing += "&activation3=" + this.activation3;
+            }
+            if(this.activation4)
+            {
+                apiURLProductsListing += "&activation4=" + this.activation4;
+            }
+            if(this.activation5)
+            {
+                apiURLProductsListing += "&activation5=" + this.activation5;
+            }
+            apiURLProductsListing += "&apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
 
             //API - fetch data from backend.
             apiProductsListingResponse = await fetch(apiURLProductsListing);
@@ -229,6 +254,7 @@ class FrontendProducts extends Component
 
             //Debug.
             //console.log("this.objCategoriesCurrent=",this.objCategoriesCurrent);
+            //console.log("apiURLProductsListing=", apiURLProductsListing);
         }catch(buildError){
             if(gSystemConfig.configDebug === true)
             {
@@ -293,9 +319,9 @@ class FrontendProducts extends Component
 
 
         //Debug.
-        console.log("configLayoutType (inside component)=", this.configLayoutType);
-        console.log("arrProductsListing  (inside component)=", this.arrProductsListing);
-        console.log("configProductsNRecords=", this.configProductsNRecords);
+        //console.log("configLayoutType (inside component)=", this.configLayoutType);
+        //console.log("arrProductsListing  (inside component)=", this.arrProductsListing);
+        //console.log("configProductsNRecords=", this.configProductsNRecords);
         //console.log("configFilesSort=", this.configFilesSort);
         //console.log("configFilesZoom=", this.configFilesZoom);
         

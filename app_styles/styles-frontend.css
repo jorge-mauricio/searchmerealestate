@@ -37,6 +37,7 @@
 
 /*Variables - default.*/
 /* ************************************************************************************** */
+
 :root{
 	--ssFrontendDefaultFont: Arial, Helvetica, sans-serif;
 	/*--ssFrontendDefaultFont: "Times New Roman", Times, serif;*/
@@ -49,8 +50,24 @@
 
 	/*Font stroke (behind text).*/
 	--ssFrontendDefaultfontStrokeWidth: 3px;
-    --ssFrontendDefaultfontStrokeColor: #000000;
+	--ssFrontendDefaultfontStrokeColor: #000000;
 }
+@media (max-width: 991px) {
+	:root{
+		--ssFrontendDefaultFont: Arial, Helvetica, sans-serif;
+		/*--ssFrontendDefaultFont: "Times New Roman", Times, serif;*/
+
+		--ssFrontendDefaultFontSize: 13px;
+		--ssFrontendDefaultTitleFontSize: 24px;
+		--ssFrontendDefaultSubheadingFontSize: 16px;
+		--ssFrontendDefaultCaptionFontSize: 11px;
+
+
+		/*Font stroke (behind text).*/
+		--ssFrontendDefaultfontStrokeWidth: 3px;
+		--ssFrontendDefaultfontStrokeColor: #000000;
+	}
+}	
 /* ************************************************************************************** */
 
 
@@ -62,6 +79,11 @@
 
 /*Bootstrap break points.*/
 /* ************************************************************************************** */
+/*Note: Configuration of multiple media sizes must be in sequence from lower to upper. */
+@media (max-width: 575px) {
+	/*xs*/
+}
+
 @media (max-width: 767px) {
 	/*xs*/
 }
@@ -189,6 +211,18 @@ input, textarea, select
 .ss-frontend-link02:hover {
 	color:#a2b9c6; 
 	text-decoration: none;
+}
+
+.ss-frontend-link03 {
+	color: #ffffff; 
+
+	font-family: var(--ssFrontendDefaultFont);
+	font-size: var(--ssFrontendDefaultFontSize);
+	text-decoration: none;
+}
+.ss-frontend-link03:hover {
+	color: #ffffff;
+	text-decoration: underline;
 }
 
 
@@ -590,12 +624,12 @@ input, textarea, select
 }
 
 .ss-frontend-btn-action {
-	color: #ffffff;
+	color: #ffffff !important;
 	background-color:#0082c6; 
 
 }
 .ss-frontend-btn-action:hover {
-	color: #ffffff;
+	color: #ffffff !important;
 	background-color:#a2b9c6; 
 }
 
@@ -1780,7 +1814,7 @@ input, textarea, select
 
 	vertical-align: top;
 
-	margin: 0px; 
+	margin: 0px 0px 10px 0px; 
 	padding: 0px; 
 }
 .ss-frontend-products-details-content-row-label01 {
@@ -1790,6 +1824,8 @@ input, textarea, select
 .ss-frontend-products-details-content-row-data01 {
 	position: relative;
 	display: block;
+
+	text-align: justify;
 }
 .ss-frontend-products-details-content-block01 {
 	position: relative;
@@ -1802,6 +1838,37 @@ input, textarea, select
 
 	vertical-align: top;
 }
+	
+
+@media (max-width: 767px) {
+	.ss-frontend-products-details-content-block01 {
+		position: relative;
+		display: inline-block;
+
+		width: 50%;
+
+		margin: 0px 0px 20px 0px; 
+		padding: 0px; 
+
+		vertical-align: top;
+	}
+}	
+
+
+@media (max-width: 575px) {
+	.ss-frontend-products-details-content-block01 {
+		position: relative;
+		display: block;
+
+		width: 100%;
+
+		margin: 0px 0px 20px 0px; 
+		padding: 0px; 
+
+		vertical-align: top;
+	}
+}
+
 .ss-frontend-products-details-content-block-label01 {
 	position: relative;
 	display: block; /*block | inline-block*/
@@ -1873,14 +1940,25 @@ input, textarea, select
 }
 
 .ss-frontend-products-details-image01-container {
-	position: relative; 
+	/*position: relative; 
 	display: block; 
 
 	width: 100%;
 
 	text-align: center; 
 
-	overflow: hidden;
+	overflow: hidden;*/
+
+
+	position: relative; 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	text-align: center; 
+	height: 520px; 
+	text-align: center; 
+	margin: 30px 0px;
+
 }
 
 .ss-frontend-products-details-image01 {
@@ -2280,7 +2358,7 @@ input, textarea, select
 	font-size: var(--ssFrontendDefaultTitleFontSize);
 
 	color: #ffffff; 
-	background-color: #78c3ae;
+	background-color: #0082c6;
 
     font-weight: bold;
     text-align: center;
@@ -2308,7 +2386,7 @@ input, textarea, select
 	position: relative;
 	display: block;
 
-	width: 200px;
+	/* width: 200px; */
 	/*height: 300px;*/
 
 	/*text-align: center;*/
@@ -2327,7 +2405,7 @@ input, textarea, select
 	font-size: var(--ssFrontendDefaultTitleFontSize);
 	font-weight: normal;
 
-	color: #000000;
+	color: #596369;
 
 	margin: 0px;
 	padding: 0px;
@@ -2342,21 +2420,23 @@ input, textarea, select
 	font-size: var(--ssFrontendDefaultSubheadingFontSize);
 	font-weight: bold;
 
-	color: #78c3ae;
+	color: #0082c6;
 }
 .ss-frontend-files-text01 {
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
-	color: #000000;
+	color: #596369;
 }
 .ss-frontend-files-caption01 {
 	position: relative;
 	display: block;
 
+	width: 300px;
+
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultCaptionFontSize);
 	font-weight: normal;
-	color: #000000;
+	color: #596369;
 	text-align: center;
 
 	margin: 0px;
@@ -2373,10 +2453,10 @@ input, textarea, select
 
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
-	color: #78c3ae;
+	color: #0082c6;
 }
 .ss-frontend-files-link01:hover {
-    color: #0000ff;
+    color: #a2b9c6;
 }
 
 /*Images.*/
@@ -2384,7 +2464,7 @@ input, textarea, select
 	position: relative;
 	display: block;
 
-	/*width: 100px;*/
+	width: 300px;
 	/*height: 150px;*/
 
 	/*background-color: #999;*/
@@ -2392,7 +2472,7 @@ input, textarea, select
 	/*background-size: contain;*/ /*cover | contain;*/
 	/*background-position: center center;*/
 
-	border: 1px solid #78c3ae;
+	border: 1px solid #0082c6;
 	margin: auto;
 	/*overflow: hidden;*/
 }
@@ -2403,17 +2483,17 @@ input, textarea, select
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
 
-	color: #78c3ae;
+	color: #0082c6;
 }
 
 .ss-frontend-files-pagination-link {
     font-family: var(--ssFrontendDefaultFont);
 	font-size: var(--ssFrontendDefaultFontSize);
 	text-decoration: none;
-	color: #78c3ae;
+	color: #0082c6;
 }
 .ss-frontend-files-pagination-link:hover {
-	color: #0000ff;
+	color: #a2b9c6;
 }
 /* ************************************************************************************** */
 

@@ -606,14 +606,45 @@ class FrontendProductsListingRecord extends Component
                                             </a>
 
                                             <div style={{position: 'relative', display: 'block', fontSize: '16px', marginTop: '4px'}}>
-                                                { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small1, "db")) }, 
+                                                {
+                                                    productsRow.info_small1 != "" ?
+                                                        HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small1, "db")) + ", "
+                                                    :
+                                                    ``
+                                                }
+                                                {
+                                                    productsRow.info_small2 != "" ?
+                                                        HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small2, "db")) + ", "
+                                                    :
+                                                    ``
+                                                }
+                                                {
+                                                    productsRow.info_small3 != "" ?
+                                                        HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small3, "db")) + ", "
+                                                    :
+                                                    ``
+                                                }
+                                                {
+                                                    productsRow.info_small5 != "" ?
+                                                        HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small5, "db"))
+                                                    :
+                                                    ``
+                                                }
+
+                                                { /*HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small1, "db")) }, 
                                                 { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small2, "db")) }, 
                                                 { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small3, "db")) }, 
-                                                { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small5, "db")) }
+                                                { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small5, "db"))*/ }
                                             </div>
 
                                             <p style={{position: 'relative', display: 'block', fontSize: '18px', marginTop: '4px'}}>
-                                                { /*SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.description, "db")TODO: limit characters*/ }
+                                                { SyncSystemNS.FunctionsGeneric.limitChar(SyncSystemNS.FunctionsGeneric.removeHTML01(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.description, "db")), gSystemConfig.configProductsDescriptionLimitChar) }
+                                                {
+                                                    SyncSystemNS.FunctionsGeneric.removeHTML01(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.description, "db")).length > gSystemConfig.configProductsDescriptionLimitChar ?
+                                                    `...`
+                                                    :
+                                                    ``
+                                                }
                                             </p>
 
                                             <div style={{position: 'absolute', display: 'block', bottom: '0px', left: '57px', width: '30px', height: '30px', lineHeight: '30px', fontSize: '20px', textAlign: 'center', border: '1px solid #ffffff', borderRadius: '5px'}}>
@@ -631,6 +662,10 @@ class FrontendProductsListingRecord extends Component
                                                 <img src="/files-layout/frontend-icon-garage.png" alt="Garage" style={{position: 'absolute', display: 'block', bottom: '0px', left: '-45px'}} />
                                             </div>
 
+                                            <div style={{position: 'absolute', display: 'block', bottom: '0px', left: '260px', height: '30px', lineHeight: '30px', fontSize: '20px', textAlign: 'left'}}>
+                                                { productsRow.number_small4 } sqft
+                                            </div>
+                                            
                                             <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/" + gSystemConfig.configRouteFrontendDetails + "/" + productsRow.id } 
                                                 title={ SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "backendItemDetails") + " - " + SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.title, "db") }  
                                                 className="ss-frontend-products-details" 
@@ -666,14 +701,40 @@ class FrontendProductsListingRecord extends Component
                                         </a>
 
                                         <div style={{position: 'relative', display: 'block', fontSize: '14px', lineHeight: '17px', margin: '4px 10px 0px 10px'}}>
-                                            { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small1, "db")) }, 
-                                            { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small2, "db")) }, 
-                                            { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small3, "db")) }, 
-                                            { HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small5, "db")) }
+                                            {
+                                                productsRow.info_small1 != "" ?
+                                                    HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small1, "db")) + ", "
+                                                :
+                                                ``
+                                            }
+                                            {
+                                                productsRow.info_small2 != "" ?
+                                                    HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small2, "db")) + ", "
+                                                :
+                                                ``
+                                            }
+                                            {
+                                                productsRow.info_small3 != "" ?
+                                                    HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small3, "db")) + ", "
+                                                :
+                                                ``
+                                            }
+                                            {
+                                                productsRow.info_small5 != "" ?
+                                                    HTMLReactParser(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.info_small5, "db"))
+                                                :
+                                                ``
+                                            }
                                         </div>
 
                                         <p style={{position: 'relative', display: 'block', fontSize: '14px', lineHeight: '17px', margin: '4px 10px 0px 10px'}}>
-                                            { /*SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.description, "db")TODO: limit characters*/ }
+                                            { SyncSystemNS.FunctionsGeneric.limitChar(SyncSystemNS.FunctionsGeneric.removeHTML01(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.description, "db")), (gSystemConfig.configProductsDescriptionLimitChar - 90)) }
+                                            {
+                                                SyncSystemNS.FunctionsGeneric.removeHTML01(SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.description, "db")).length > (gSystemConfig.configProductsDescriptionLimitChar - 90) ?
+                                                `...`
+                                                :
+                                                ``
+                                            }
                                         </p>
 
                                         <div style={{position: 'relative', display: 'block', margin: '10px 10px 5px 60px'}}>
@@ -689,6 +750,9 @@ class FrontendProductsListingRecord extends Component
                                                 { productsRow.number_small3 }
                                                 <img src="/files-layout/frontend-icon-garage.png" alt="Garage" style={{position: 'absolute', display: 'block', bottom: '0px', left: '-45px'}} />
                                             </div>
+                                        </div>
+                                        <div style={{position: 'relative', display: 'block', margin: '5px auto'}}>
+                                            { productsRow.number_small4 } sqft
                                         </div>
 
                                         <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/" + gSystemConfig.configRouteFrontendDetails + "/" + productsRow.id } 

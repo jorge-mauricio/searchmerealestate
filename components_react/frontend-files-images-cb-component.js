@@ -191,7 +191,9 @@ class FrontendFilesImages extends Component
         try
         {
             //API - build URL string.
-            apiURLFilesListing = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIFiles + "/" + this.idParentFiles + "/?fileType=1&apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
+            //apiURLFilesListing = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIFiles + "/" + this.idParentFiles + "/?fileType=1&apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(process.env.CONFIG_API_KEY_SYSTEM, "env"), 2);
+            apiURLFilesListing = gSystemConfig.configAPIURL + "/" + gSystemConfig.configRouteAPI + "/" + gSystemConfig.configRouteAPIFiles + "/" + this.idParentFiles + "/?fileType=1";
+            apiURLFilesListing += "&apiKey=" + SyncSystemNS.FunctionsCrypto.encryptValue(SyncSystemNS.FunctionsGeneric.contentMaskWrite(gSystemConfig.configAPIKeySystem, "env"), 2)
             //console.log("apiURLCategoriesDetailsCurrent=", apiURLCategoriesDetailsCurrent);
 
             //API - fetch data from backend.
@@ -297,9 +299,13 @@ class FrontendFilesImages extends Component
                 { /*Files records. */ }
                 { arrFilesListing.length > 0 ?
                     <React.Fragment>
-                        <h4 className="ss-frontend-files-title">
+                        <h3 className="d-none d-lg-block d-xl-block ss-frontend-heading02" style={{position: 'relative', display: 'block', width: '100%', height: '180px', lineHeight: '150px', backgroundImage: 'url(/files-layout/frontend-heading-bg03.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center top', textAlign: 'center', margin: '0px', padding: '0px', overflow: 'hidden'}}>
                             { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "frontendFilesImagesTitleMain") }
-                        </h4>
+                        </h3>
+                        <h3 className="d-lg-none ss-frontend-heading02" style={{position: 'relative', display: 'block', width: '95%', height: '115px', lineHeight: '100px', backgroundImage: 'url(/files-layout/frontend-mobile-subheading-bg01-right.png), url(/files-layout/frontend-mobile-subheading-bg01-left.png), url(/files-layout/frontend-mobile-subheading-bg01.png)', backgroundRepeat: 'no-repeat, no-repeat, repeat-x', backgroundPosition: 'right top, left top, center top', textAlign: 'center', fontSize: '20px', margin: 'auto', padding: '0px', overflow: 'hidden'}}>
+                            { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "frontendFilesImagesTitleMain") }
+                        </h3>
+
                         <FrontendFilesImagesListingRecord 
                             arrFilesListing={ arrFilesListing } 
                             configLayoutType={ this.configLayoutType } 

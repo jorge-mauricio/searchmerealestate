@@ -23,7 +23,7 @@ exports.appLabels = {
     //**************************************************************************************
     layoutDevelopment: "Development",
     layoutCopyright: "Copyright",
-    layoutCopyright1: "All rights reserved",
+    layoutCopyright1: "All rights reserved.",
     layoutVersion: "Version",
     layoutDesktopAccess: "Access Desktop Version",
     //**************************************************************************************
@@ -203,8 +203,8 @@ exports.appLabels = {
     backendMenuCategoriesMaintenance: "Categories - Maintenance",
         backendMenuCategoriesMaintenanceToolTip: "Click to access the system´s maintenace area to include additional options for the categories registry.",
 
-    backendMenuProductsMaintenance: "Products - Maintenance",
-        backendMenuProductsMaintenanceToolTip: "Click to access the system´s maintenace area to include additional options for the products registry.",
+    backendMenuProductsMaintenance: "Real Estate - Maintenance",
+        backendMenuProductsMaintenanceToolTip: "Click to access the system´s maintenace area to include additional options for the real estate registry.",
 
     backendMenuPublicationsMaintenance: "Publications - Maintenance",
         backendMenuPublicationsMaintenanceToolTip: "Click to access the system´s maintenace area to include additional options for the publications registry.",
@@ -602,7 +602,7 @@ exports.appLabels = {
     backendProductsNumberS1: "Bedrooms",
     backendProductsNumberS2: "Bathrooms",
     backendProductsNumberS3: "Garage",
-    backendProductsNumberS4: "Number Small 4",
+    backendProductsNumberS4: "Square Feet",
     backendProductsNumberS5: "Number Small 4",
 
     backendProductsURL1: "External Link",

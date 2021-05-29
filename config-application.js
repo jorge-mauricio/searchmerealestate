@@ -293,7 +293,9 @@ gSystemConfig.configEmailFormat = 1; //0 - text | 1 - HTML
 //APIs.
 //----------------------
 //.env
-//gSystemConfig.configAPIKeyInternal = "";
+//gSystemConfig.configAPIKeyInternal = "createSecretPassword";
+gSystemConfig.configAPIKeySystem = "createSecretPassword"; //Note: for node deploy, value must be hard coded (TODO: Reaserch architecture to retrieve server variables .env in react).
+  //gSystemConfig.configAPIKeySystem = process.env.CONFIG_API_KEY_SYSTEM;
 //----------------------
 //**************************************************************************************
 
@@ -1011,14 +1013,14 @@ gSystemConfig.configProductsInfoS4FieldType = 1; //1 - single line | 2 - multili
 gSystemConfig.enableProductsInfoS5 = 1; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfoS5FieldType = 1; //1 - single line | 2 - multiline
 
-gSystemConfig.enableProductsInfoS6 = 2; //0 - disable | 1 - enable
-gSystemConfig.configProductsInfoS6FieldType = 1; //1 - single line | 2 - multiline
+gSystemConfig.enableProductsInfoS6 = 1; //0 - disable | 1 - enable
+gSystemConfig.configProductsInfoS6FieldType = 2; //1 - single line | 2 - multiline
 
-gSystemConfig.enableProductsInfoS7 = 2; //0 - disable | 1 - enable
-gSystemConfig.configProductsInfoS7FieldType = 1; //1 - single line | 2 - multiline
+gSystemConfig.enableProductsInfoS7 = 1; //0 - disable | 1 - enable
+gSystemConfig.configProductsInfoS7FieldType = 2; //1 - single line | 2 - multiline
 
-gSystemConfig.enableProductsInfoS8 = 2; //0 - disable | 1 - enable
-gSystemConfig.configProductsInfoS8FieldType = 1; //1 - single line | 2 - multiline
+gSystemConfig.enableProductsInfoS8 = 1; //0 - disable | 1 - enable
+gSystemConfig.configProductsInfoS8FieldType = 2; //1 - single line | 2 - multiline
 
 gSystemConfig.enableProductsInfoS9 = 0; //0 - disable | 1 - enable
 gSystemConfig.configProductsInfoS9FieldType = 2; //1 - single line | 2 - multiline
@@ -1112,7 +1114,7 @@ gSystemConfig.configProductsNumberS2FieldType = 1; //1 - general number | 2 - sy
 gSystemConfig.enableProductsNumberS3 = 1; //0 - disable | 1 - enable
 gSystemConfig.configProductsNumberS3FieldType = 1; //1 - general number | 2 - system currency
 
-gSystemConfig.enableProductsNumberS4 = 0; //0 - disable | 1 - enable
+gSystemConfig.enableProductsNumberS4 = 1; //0 - disable | 1 - enable
 gSystemConfig.configProductsNumberS4FieldType = 1; //1 - general number | 2 - system currency
 
 gSystemConfig.enableProductsNumberS5 = 0; //0 - disable | 1 - enable
@@ -1172,7 +1174,8 @@ gSystemConfig.enableProductsActivation5 = 0; //0 - disable | 1 - enable
 
 //Frontend configuration.
 gSystemConfig.configProductsImagePlaceholder = 1; //0 - disable | 1 - enable
-
+gSystemConfig.configProductsTitleLimitChar = 0; //0 - disable | 123
+gSystemConfig.configProductsDescriptionLimitChar = 150; //0 - disable | 123
 
 gSystemConfig.enableProductsFrontendPagination = 1; //0 - disable | 1 - enable (custom) | 11 - enable (bootstrap)
 gSystemConfig.enableProductsFrontendPaginationNumbering = 1; //0 - disable | 1 - enable

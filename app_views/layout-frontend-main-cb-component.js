@@ -449,14 +449,6 @@ class LayoutFrontendMain extends Component
                                             <img src="/files-layout/frontend-desktop-logo.png" alt="Logo" />
                                         </a>
 
-                                        {/*WhatsApp.*/}
-                                        <a href="https://api.whatsapp.com/send?phone=16465715415" target="_blank" title="WhatsApp" className="ss-frontend-btn-contact">
-                                            <span>
-                                            CALL OR TEXT US!
-                                            </span>
-                                            +1 (646) 571-5415
-                                        </a>
-
                                         {/*Links.*/}
                                         <nav style={{position: 'absolute', display: 'block', left: '0px', right: '0px', top: '149px', textAlign: 'center'}}>
                                             <a href="/" className="ss-frontend-link01 ss-frontend-link01-layout" title="Home">
@@ -569,31 +561,41 @@ class LayoutFrontendMain extends Component
                                             <strong style={{display: 'block'}}>
                                                 New York - United States
                                             </strong>
-                                            +1 (646) 571-5415
+                                            <a href="mailto:usa@searchmerealstate.com" 
+                                                target="_blank" 
+                                                className="ss-frontend-footer-links01" 
+                                                style={{fontSize: "13px"}}>
+                                                usa@searchmerealstate.com
+                                            </a>
                                         </div>
                                         <div style={{position: 'relative', display: 'block', marginBottom: '4px'}}>
                                             <strong style={{display: 'block'}}>
                                                 Germany - Europe
                                             </strong>
-                                            +49 (0) 6430 92 60 10
+                                            <a href="mailto:europe@searchmerealstate.com" 
+                                                target="_blank" 
+                                                className="ss-frontend-footer-links01" 
+                                                style={{fontSize: "13px"}}>
+                                                europe@searchmerealstate.com
+                                            </a>
                                         </div>
                                         <div>
                                             <strong style={{display: 'block'}}>
                                                 São Paulo / Rio de Janeiro - Brazil 
                                             </strong>
-                                            SP: +55 (11) 3230-8388
-                                            <br />
-                                            RJ: +55 (21) 3285-8388
+                                            <a href="mailto:brazil@searchmerealstate.com" 
+                                                target="_blank" 
+                                                className="ss-frontend-footer-links01" 
+                                                style={{fontSize: "13px"}}>
+                                                brazil@searchmerealstate.com
+                                            </a>
                                         </div>
                                     </address>
 
                                     {/*Direct contact.*/}
                                     <div style={{position: 'absolute', display: 'block', top: '25px', right: '25px', textAlign: 'right'}}>
                                         <div className="ss-frontend-footer-heading01" style={{position: 'relative', display: 'block', marginBottom: '0px', fontSize: '24px'}}>
-                                            Direct Call / Text
-                                        </div>
-                                        <div style={{fontSize: '28px'}}>
-                                            +1 (646) 571-5415
+                                            Direct Contact
                                         </div>
                                         <a href="mailto:info@searchmerealestate.com" className="ss-frontend-footer-links01" style={{position: 'relative', display: 'block', fontSize: '17px', marginTop: '-4px'}}>
                                             info@searchmerealestate.com
@@ -661,14 +663,6 @@ class LayoutFrontendMain extends Component
                                     }} style={{position: 'relative', display: 'block', padding: '5px', cursor: 'pointer'}} title="Menu">
                                     <img src="/files-layout/frontend-mobile-menu01.png" alt="Menu" />
                                 </a>
-
-                                {/*WhatsApp.*/}
-                                <a href="https://api.whatsapp.com/send?phone=16465715415" target="_blank" title="WhatsApp" className="ss-frontend-mobile-btn-contact">
-                                    <span>
-                                        CALL OR TEXT US!
-                                    </span>
-                                    +1 (646) 571-5415
-                                </a>
                             </header>
                             <a href="/" title="Home" style={{position: 'relative', display: 'block', width: '100%', height: '125px', backgroundImage: 'url(/files-layout/frontend-mobile-logo.png), linear-gradient(#fafafa, #eeeeec)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}>
                             
@@ -717,10 +711,7 @@ class LayoutFrontendMain extends Component
                                 {/*Direct contact.*/}
                                 <div style={{position: 'relative', display: 'block', textAlign: 'center', marginTop: '15px'}}>
                                     <div className="ss-frontend-footer-heading01" style={{position: 'relative', display: 'block', marginBottom: '0px', fontSize: '20px'}}>
-                                        Direct Call / Text
-                                    </div>
-                                    <div style={{fontSize: '28px'}}>
-                                        +1 (646) 571-5415
+                                        Direct Contact
                                     </div>
                                     <a href="mailto:info@searchmerealestate.com" className="ss-frontend-footer-links01" style={{position: 'relative', display: 'block', fontSize: '17px', marginTop: '-4px'}}>
                                         info@searchmerealestate.com
@@ -733,24 +724,37 @@ class LayoutFrontendMain extends Component
                                         Contact Options
                                     </div>
                                     <div style={{position: 'relative', display: 'block', marginBottom: '4px'}}>
-                                    <strong style={{display: 'block'}}>
-                                        New York - United States
-                                    </strong>
-                                        +1 (646) 571-5415
+                                        <strong style={{display: 'block'}}>
+                                            New York - United States
+                                        </strong>
+                                        <a href="mailto:usa@searchmerealstate.com" 
+                                            target="_blank" 
+                                            className="ss-frontend-footer-links01" 
+                                            style={{fontSize: "13px"}}>
+                                            usa@searchmerealstate.com
+                                        </a>
                                     </div>
                                     <div style={{position: 'relative', display: 'block', marginBottom: '4px'}}>
-                                    <strong style={{display: 'block'}}>
-                                        Germany - Europe
-                                    </strong>
-                                        +49 (0) 6430 92 60 10
+                                        <strong style={{display: 'block'}}>
+                                            Germany - Europe
+                                        </strong>
+                                        <a href="mailto:europe@searchmerealstate.com" 
+                                            target="_blank" 
+                                            className="ss-frontend-footer-links01" 
+                                            style={{fontSize: "13px"}}>
+                                            europe@searchmerealstate.com
+                                        </a>
                                     </div>
                                     <div>
                                         <strong style={{display: 'block'}}>
                                             São Paulo / Rio de Janeiro - Brazil 
                                         </strong>
-                                        SP: +55 (11) 3230-8388
-                                        <br />
-                                        RJ: +55 (21) 3285-8388
+                                        <a href="mailto:brazil@searchmerealstate.com" 
+                                        target="_blank" 
+                                        className="ss-frontend-footer-links01" 
+                                        style={{fontSize: "13px"}}>
+                                        brazil@searchmerealstate.com
+                                    </a>
                                     </div>
                                 </address>
 
@@ -759,7 +763,7 @@ class LayoutFrontendMain extends Component
                                     <div className="ss-frontend-footer-heading01" style={{position: 'relative', display: 'block', marginBottom: '0px', fontSize: '20px'}}>
                                         Site Map
                                     </div>
-                                    <ul className="ss-frontend-links-ul02" style={{textAlign: 'center', left: '12px'}}>
+                                    <ul className="ss-frontend-links-ul02" style={{textAlign: 'center', left: '12px', listStyleType: 'none'}}>
                                         <li className="ss-frontend-links-li02">
                                             <a href="/" className="ss-frontend-footer-links01" title="Home">
                                                 Home
@@ -806,7 +810,7 @@ class LayoutFrontendMain extends Component
                                         { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "layoutCopyright") } © 
                                         { gSystemConfig.configCopyrightYear } 
                                         { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "configSiteTile") }.
-                                        { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "layoutCopyright1") }
+                                        { /*SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "layoutCopyright1")*/ }
                                     </div>
                                     <a href={gSystemConfig.configDevSite} target="_blank" className="ss-frontend-credit" style={{fontSize: '8px'}}>
                                         { SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, "layoutDevelopment") }: 

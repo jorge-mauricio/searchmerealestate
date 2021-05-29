@@ -638,9 +638,14 @@ class FrontendHome extends Component
                                                     in the most powerful country.
                                                 </div>
                                                 <div style={{marginTop: '30px'}}>
-                                                    Give us a call:
+                                                    Get in touch with us:
                                                     <br />
-                                                    +1 (646) 571-5415
+                                                    <a href="mailto:usa@searchmerealstate.com" 
+                                                        target="_blank" 
+                                                        className="ss-frontend-link03" 
+                                                        style={{fontSize: "20px"}}>
+                                                        usa@searchmerealstate.com
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -658,9 +663,14 @@ class FrontendHome extends Component
                                                     all over Europe.
                                                 </div>
                                                 <div style={{marginTop: '30px'}}>
-                                                    Give us a call:
+                                                    Get in touch with us:
                                                     <br />
-                                                    +49 (0) 6430 92 60 10
+                                                    <a href="mailto:europe@searchmerealstate.com" 
+                                                        target="_blank" 
+                                                        className="ss-frontend-link03" 
+                                                        style={{fontSize: "20px"}}>
+                                                        europe@searchmerealstate.com
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -682,11 +692,14 @@ class FrontendHome extends Component
                                                     investments in the biggest city.
                                                 </div>
                                                 <div style={{marginTop: '30px'}}>
-                                                    Give us a call:
+                                                    Get in touch with us:
                                                     <br />
-                                                    São Paulo: +55 (11) 3230-8388
-                                                    <br />
-                                                    Rio de Janeiro: +55 (21) 3285-8388
+                                                    <a href="mailto:brazil@searchmerealstate.com" 
+                                                        target="_blank" 
+                                                        className="ss-frontend-link03" 
+                                                        style={{fontSize: "20px"}}>
+                                                        brazil@searchmerealstate.com
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -699,7 +712,7 @@ class FrontendHome extends Component
                                     Showcase
                                 </h2>
                                 <section className="ss-frontend-layout-section-content01 ss-frontend-text01" style={{margin: '0px 0px 60px 0px', overflow: 'visible'}}>
-                                    <a href={"/" + gSystemConfig.configRouteFrontendContent + "/109/?idTbForms=117"} className="ss-frontend-link02" style={{position: 'absolute', display: 'block', left: '50%', transform: 'translate(-50%, 0)', top: '-50px'}}>
+                                    <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/108/"} className="ss-frontend-link02" style={{position: 'absolute', display: 'block', left: '50%', transform: 'translate(-50%, 0)', top: '-50px'}}>
                                         Access Our Full Listing
                                     </a>
 
@@ -713,7 +726,7 @@ class FrontendHome extends Component
                                         configProductsSort={gSystemConfig.configProductsSort} 
 
                                         activation={1} 
-                                        activation1={""} 
+                                        activation1={1} 
                                         activation2={""} 
                                         activation3={""} 
                                         activation4={""} 
@@ -724,10 +737,10 @@ class FrontendHome extends Component
 
 
                                 {/*Indexes.*/}
-                                <h2 className="ss-frontend-heading02" style={{position: 'relative', display: 'block', width: '100%', height: '180px', lineHeight: '150px', backgroundImage: 'url(/files-layout/frontend-heading-bg03.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center top', textAlign: 'center', margin: '0px', padding: '0px', overflow: 'hidden'}}>
+                                <h2 className="ss-frontend-heading02" style={{position: 'relative', display: 'none', width: '100%', height: '180px', lineHeight: '150px', backgroundImage: 'url(/files-layout/frontend-heading-bg03.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center top', textAlign: 'center', margin: '0px', padding: '0px', overflow: 'hidden'}}>
                                     Indexes
                                 </h2>
-                                <section className="ss-frontend-layout-section-content01 ss-frontend-text01" style={{margin: '25px 0px 60px 0px'}}>
+                                <section className="ss-frontend-layout-section-content01 ss-frontend-text01" style={{display: 'none', margin: '25px 0px 60px 0px'}}>
                                     <div style={{position: 'relative', display: 'block', width: '940px', height: '480px', backgroundColor: '#f3f3f3', borderRadius: '20px', margin: 'auto'}}>
                                         <a onclick className="ss-frontend-indexes-link01" style={{left: '12px', top: '30px'}}>
                                             <span style={{position: 'relative', display: 'block', fontSize: '26px', marginLeft: '15px', marginTop: '22px'}}>
@@ -864,9 +877,14 @@ class FrontendHome extends Component
                                             in the most powerful country.
                                         </div>
                                         <div style={{marginTop: '20px'}}>
-                                            Give us a call:
+                                            Get in touch with us:
                                             <br />
-                                            +1 (646) 571-5415
+                                            <a href="mailto:usa@searchmerealstate.com" 
+                                                target="_blank" 
+                                                className="ss-frontend-link03" 
+                                                style={{fontSize: "14px"}}>
+                                                usa@searchmerealstate.com
+                                            </a>
                                         </div>
                                     </div>
 
@@ -884,9 +902,14 @@ class FrontendHome extends Component
                                             all over Europe.
                                         </div>
                                         <div style={{marginTop: '20px'}}>
-                                            Give us a call:
+                                            Get in touch with us:
                                             <br />
-                                            +49 (0) 6430 92 60 10
+                                            <a href="mailto:europe@searchmerealstate.com" 
+                                                target="_blank" 
+                                                className="ss-frontend-link03" 
+                                                style={{fontSize: "14px"}}>
+                                                europe@searchmerealstate.com
+                                            </a>
                                         </div>
                                     </div>
 
@@ -908,11 +931,14 @@ class FrontendHome extends Component
                                             great business investments in the biggest city.
                                         </div>
                                         <div style={{marginTop: '20px'}}>
-                                            Give us a call:
+                                            Get in touch with us:
                                             <br />
-                                            São Paulo: +55 (11) 3230-8388
-                                            <br />
-                                            Rio de Janeiro: +55 (21) 3285-8388
+                                            <a href="mailto:brazil@searchmerealstate.com" 
+                                                target="_blank" 
+                                                className="ss-frontend-link03" 
+                                                style={{fontSize: "14px"}}>
+                                                brazil@searchmerealstate.com
+                                            </a>
                                         </div>
                                     </div>
                                 </section>
@@ -932,7 +958,7 @@ class FrontendHome extends Component
                                         configProductsSort={gSystemConfig.configProductsSort} 
 
                                         activation={1} 
-                                        activation1={""} 
+                                        activation1={1} 
                                         activation2={""} 
                                         activation3={""} 
                                         activation4={""} 
@@ -942,10 +968,10 @@ class FrontendHome extends Component
                                 </section>     
 
                                 
-                                <h2 className="ss-frontend-heading02" style={{position: 'relative', display: 'block', width: '95%', height: '115px', lineHeight: '100px', backgroundImage: 'url(/files-layout/frontend-mobile-subheading-bg01-right.png), url(/files-layout/frontend-mobile-subheading-bg01-left.png), url(/files-layout/frontend-mobile-subheading-bg01.png)', backgroundRepeat: 'no-repeat, no-repeat, repeat-x', backgroundPosition: 'right top, left top, center top', textAlign: 'center', fontSize: '20px', margin: 'auto', padding: '0px', overflow: 'hidden'}}>
+                                <h2 className="ss-frontend-heading02" style={{position: 'relative', display: 'none', width: '95%', height: '115px', lineHeight: '100px', backgroundImage: 'url(/files-layout/frontend-mobile-subheading-bg01-right.png), url(/files-layout/frontend-mobile-subheading-bg01-left.png), url(/files-layout/frontend-mobile-subheading-bg01.png)', backgroundRepeat: 'no-repeat, no-repeat, repeat-x', backgroundPosition: 'right top, left top, center top', textAlign: 'center', fontSize: '20px', margin: 'auto', padding: '0px', overflow: 'hidden'}}>
                                     Indexes
                                 </h2>
-                                <section className="ss-frontend-mobile-layout-section-content01 ss-frontend-text01" style={{margin: '0px 0px 25px 0px'}}>
+                                <section className="ss-frontend-mobile-layout-section-content01 ss-frontend-text01" style={{display: 'none', margin: '0px 0px 25px 0px'}}>
                                     <div style={{position: 'relative', display: 'block', width: '305px', height: '514px', backgroundColor: '#f3f3f3', borderRadius: '15px', margin: 'auto'}}>
                                         <a onclick className="ss-frontend-indexes-link01" style={{position: 'relative', paddingTop: '1px', top: '10px', marginLeft: 'auto', marginRight: 'auto', width: '290px'}}>
                                             <span style={{position: 'relative', display: 'block', fontSize: '26px', marginLeft: '15px', marginTop: '22px'}}>
