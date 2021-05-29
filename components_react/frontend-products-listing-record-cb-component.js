@@ -697,7 +697,7 @@ class FrontendProductsListingRecord extends Component
                                         <a href={"/" + gSystemConfig.configRouteFrontendProducts + "/" + gSystemConfig.configRouteFrontendDetails + "/" + productsRow.id } 
                                             title={ SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.title, "db") }  
                                             className="ss-frontend-products-listing-title-link01" style={{fontSize: '18px', lineHeight: '24px', margin: '-35px 10px 0px 10px'}}>
-                                            Project title and some more information in two lines
+                                            { SyncSystemNS.FunctionsGeneric.contentMaskRead(productsRow.title, "db") }
                                         </a>
 
                                         <div style={{position: 'relative', display: 'block', fontSize: '14px', lineHeight: '17px', margin: '4px 10px 0px 10px'}}>
