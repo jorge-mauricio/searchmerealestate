@@ -241,7 +241,8 @@ class FrontendProductsDetails extends Component
         
         if(this.objProductsDetails.tblProductsImageMain != "")
         {
-            document.querySelector('meta[property="og:image"]').setAttribute("content", gSystemConfig.configSystemURL + "/" +  gSystemConfig.configDirectoryFilesSD + "/" + this.objProductsDetails.tblProductsImageMain);
+            //document.querySelector('meta[property="og:image"]').setAttribute("content", gSystemConfig.configSystemURL + "/" +  gSystemConfig.configDirectoryFilesSD + "/" + this.objProductsDetails.tblProductsImageMain);
+            document.querySelector('meta[property="og:image"]').setAttribute("content", gSystemConfig.configSystemURLImages + "/" + this.objProductsDetails.tblProductsImageMain);
         }else{
             document.querySelector('meta[property="og:image"]').setAttribute("content", gSystemConfig.configSystemURL + "/" +  gSystemConfig.configDirectoryFilesLayoutSD + "/" + "icon-logo-og.png");
         }
